@@ -1,0 +1,86 @@
+<div class="container landingImage" data-type="imageCTA">
+    
+    <div class="row options"> 
+        <h7 data-toggle="tooltip" data-placement="left" title="" >Content type: Image with a CTA</h7>
+        <form-options></form-options>
+    </div>
+    
+    
+    <div class="row" data-lang="eng">
+        <h4>English</h4>
+        
+        <div class="row">
+            <label>Image Picture :</label><br>
+            <input type='text' name='img' data-lang='eng' class='col-md-6 form-control' placeholder='Enter the English picture name' onblur='imgChange(this, previewCTA(this));' >
+            <input type='checkbox' value='' checked>In Scene 7<span class="glyphicon glyphicon-eye-open"></span>
+        </div>    
+        <br>
+        <div class="row">
+            <label>SEO :</label><br>
+            <input type='text' name='seo' data-lang='eng' class='form-control' placeholder='Enter English SEO' >
+        </div>    
+        <br>
+        <div class="row">
+          <label>CTA :</label>
+          <input type='text' name='cta' data-lang='eng' class='form-control' placeholder='Enter English CTA text' >
+        </div>
+        <br>
+        <div class="row">
+           <label data-toggle="tooltip" data-placement="top" title="Same for both languages">Link :</label><br>
+           <input type='text' name='link' data-lang='eng' class='form-control' placeholder='Enter Link' >
+        </div>  
+        <!--
+        <div class="row">
+            <label data-toggle="tooltip" data-placement="top" title="Not necessary">Text Over image :</label><br>
+            <input type='text' name='text' data-lang='eng' class='form-control' placeholder='Enter text' >
+        </div> 
+        -->
+        <br><br>
+    </div>    
+    
+    
+    <div class="row" data-lang="fr">
+        <h4>French</h4>
+        
+        <div class="row">
+            <label>Image Picture :</label><br>
+            <input type='text' name='img' data-lang='fr' class='col-md-6 form-control' placeholder='Enter the French picture name' onblur='imgChange(this)'>
+            <input type='checkbox' value='' checked>In Scene 7<span class="glyphicon glyphicon-eye-open"></span>
+        </div>
+        <br>
+        <div class="row">
+            <label>SEO :</label><br>
+            <input type='text' name='seo' data-lang='fr' class='form-control' placeholder='Enter French SEO' >
+        </div>
+        <br>
+        <div class="row">
+          <label>CTA :</label>
+          <input type='text' name='cta' data-lang='fr' class='form-control' placeholder='Enter French CTA text' >
+        </div>
+        <!--
+        <div class="row">
+            <label data-toggle="tooltip" data-placement="top" title="Not necessary">Text Over image :</label><br>
+            <input type='text' name='text' data-lang='fr' class='form-control' placeholder='Enter text' >
+        </div>
+        -->
+        <br>
+    </div>
+    
+   
+    
+    <div class="row" data-lang="cta">
+        <label>CTA Position</label>
+        <input type="range" name="posLeft" min="1" max="82.7" value="0" step="0.1" class='form-control' onchange="mooveCTA(this, 'left')">
+        <input type="range" name="posTop" min="1" max="99" value="50" step="0.1" class='form-control' orient="vertical" onchange="mooveCTA(this, 'top')">
+        
+        <div class="preview-imgcta" style="overflow:hidden;">
+          <div class="preview-cta" style="display:block;height:30px;position:relative;left:0%;top:0%;background-color:white;padding: 0 10px;display: inline-block;text-transform: uppercase;font-size: 13px;outline: none;border: 1px solid #e71836;">CTA</div>
+        </div>
+    </div>
+    
+    
+    <div class="row options">
+       <close-form></close-form>
+    </div>
+    
+</div>

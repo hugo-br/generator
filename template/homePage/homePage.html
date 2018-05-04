@@ -1,0 +1,966 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta content="True" name="HandheldFriendly" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+    
+	<link rel="stylesheet" type="text/css" href="https://www.lechateau.com/style/html/landing/assets/css/main.css">
+    <link rel="stylesheet" type="text/css" href="https://www.lechateau.com/style/html/assets/fonts/MyFontsWebfontsKit.css">
+    
+   
+    <!-- COPY ONLY THIS CSS FOR BCC -->
+    <link rel="stylesheet" type="text/css" href="https://www.lechateau.com/style/html/landing/assets/css/lc-landing-pages-V3.css">
+	
+    <!-- MasterSlider main JS file - MUST INCLUDE IN BCC -->
+	<script src="https://www.lechateau.com/style/html/landing/assets/masterslider-v2/masterslider.min.js"></script>
+
+	<link rel="stylesheet" href="https://www.lechateau.com/style/html/landing/assets/masterslider-v2/style/masterslider.css" />
+
+	<link rel="stylesheet" href="https://www.lechateau.com/style/html/landing/assets/masterslider-v2/skins/default/style.css" />
+	
+
+<style type="text/css">
+
+.sub-header-black {
+  display: none;
+}
+
+#content>div.wrapper {
+  width: 100%;
+  max-width: 2000px;
+}
+
+img[usemap] {
+  border: none;
+  height: auto;
+  max-width: 100%;
+  width: auto;
+}
+
+
+/* Input Style */
+
+.signup-field {
+  width: 33% !important;
+  display: inherit !important;
+  height: 30px;
+  padding-left: 15px;
+  margin-bottom: 20px;
+  border: 1px solid #eaeaea;
+}
+
+
+/* Break points */
+
+@media (max-width:2000px) and (min-width:769px) {
+  .FS-SHOW-TABLET {
+    display: none;
+  }
+}
+
+@media (min-width:769px) {
+  .FS-SHOW-DESKTOP {
+    display: block;
+  }
+  .FS-SHOW-TABLET {
+    display: none;
+  }
+  .FS-SHOW-MOBILE {
+    display: none;
+  }
+  .tablet-video {
+    display: none;
+  }
+}
+
+@media (max-width:768px) {
+  .FS-SHOW-DESKTOP {
+    display: none;
+  }
+  .FS-SHOW-TABLET {
+    display: block;
+  }
+  .FS-SHOW-MOBILE {
+    display: none;
+  }
+}
+
+@media (max-width:591px) {
+  .FS-SHOW-DESKTOP {
+    display: none;
+  }
+  .FS-SHOW-TABLET {
+    display: none;
+  }
+  .FS-SHOW-MOBILE {
+    display: block;
+  }
+  .tablet-video {
+    display: none;
+  }
+}
+
+
+/* END Break points */
+
+#content {
+  padding-bottom: 10px !important;
+  padding-left: 0px !important;
+  padding-right: 0px !important;
+  margin-bottom: 0px !important;
+}
+
+.wrapper {
+  padding: 0 0px;
+}
+
+.backgroundpos-001 {
+  background-position-x: 50% !important;
+  background-position: 50% !important;
+  background-repeat: no-repeat;
+}
+
+.backgroundpos-002 {
+  background-position-x: 50% !important;
+  background-position: 50% !important;
+  background-repeat: no-repeat;
+}
+
+.backgroundpos-003 {
+  background-position-x: 50% !important;
+  background-position: 50% !important;
+  background-repeat: no-repeat;
+}
+
+.backgroundpos-004 {
+  background-position-x: 50% !important;
+  background-position: 50% !important;
+  background-repeat: no-repeat;
+}
+
+.backgroundpos-005 {
+  background-position-x: 50% !important;
+  background-position: 50% !important;
+  background-repeat: no-repeat;
+}
+
+.backgroundpos-006 {
+  background-position-x: 50% !important;
+  background-position: 50% !important;
+  background-repeat: no-repeat;
+}
+
+.backgroundpos-outlet {
+  background-position-x: 50% !important;
+  background-position: 50% !important;
+  background-repeat: no-repeat;
+}
+
+
+/* START -> MASTER CUSTOM SLIDER CSS */
+
+.ms-view {
+  background: none !important;
+}
+
+.ms-skin-default .ms-nav-prev {
+  left: 15px;
+}
+
+.ms-skin-default .ms-nav-next {
+  right: 15px;
+}
+
+
+/* END -> MASTER SLIDER CSS */
+
+
+/* ---- OUTLET FALL STYLES ---- */
+
+.txt-from-fall {
+  text-transform: uppercase;
+  font-size: 12px;
+  font-weight: 200 !important;
+  font-family: MuseoSans-500;
+  letter-spacing: 1.5px;
+}
+
+.banner-title-outlet-fall {
+  font-family: MuseoSans-700;
+  font-size: 24px;
+  letter-spacing: 2px;
+}
+
+.banner-outlet-price-fall {
+  font-size: 54px;
+  letter-spacing: -3px;
+  font-family: MuseoSans-900;
+}
+
+.banner-outlet-dollar-fall {
+  vertical-align: top;
+  font-size: 32px !important;
+  line-height: 1.3;
+  font-family: MuseoSans-900;
+}
+
+.margin-nudge-outlet {
+  width: 300px;
+}
+
+.price-diplay {
+  display: inline;
+}
+
+.demo-price {
+  display: inline;
+}
+
+@media only screen and (max-width: 591px) {
+  .backgroundpos-outlet {
+    background-position-x: 66% !important;
+    background-position: 66% !important;
+    background-repeat: no-repeat;
+  }
+  .margin-nudge-outlet {
+    margin-top: 370px;
+    width: 300px;
+    margin-left: auto;
+  }
+  /* Input Style */
+  .signup-field {
+    width: 100% !important;
+    display: inherit !important;
+    height: 30px;
+    padding-left: 15px;
+    margin-bottom: 20px;
+    border: 1px solid #eaeaea;
+  }
+}
+
+.insta-holder-001 {
+  margin-right: 0.6%;
+}
+
+.insta-holder-002 {}
+
+@media (min-width:1025px) {
+  .FS-SHOW-INSTA-DESKTOP {
+    display: block;
+  }
+}
+
+@media (max-width:1024px) {
+  .FS-SHOW-INSTA-DESKTOP {
+    display: none;
+  }
+}
+
+.wrapper1 {
+  padding: 0 0px !important;
+}
+
+.wrapper1 {
+  padding: 0 0px;
+}
+
+
+/* Main Buttons - regular */
+
+a.button.signup2,
+button.signup2,
+.add-to-bag button {
+  background: white;
+  border-color: #999999;
+  -webkit-transition: color 0.5s, background 0.5s, border-color 0.5s;
+  -moz-transition: color 0.5s, background 0.5s, border-color 0.5s;
+  transition: color 0.5s, background 0.5s, border-color 0.5s;
+  text-align: center;
+  font-family: MuseoSans-700;
+  font-weight: normal;
+  font-style: normal;
+  color: #e71836;
+  min-width: 40px;
+  height: 40px;
+}
+
+a.button.signup2:after,
+button.signup2:after,
+.add-to-bag button:after {
+  border-left-color: #e71836;
+  padding-right: 5px;
+}
+
+a.button.signup2:hover,
+button.signup2:hover,
+.add-to-bag button:hover {
+  background: #8d8d8d;
+  border-color: #C7C7C7;
+  color: #e71836;
+  -webkit-transition: color 0.2s, background 0.2s, border-color 0.2s;
+  -moz-transition: color 0.2s, background 0.2s, border-color 0.2s;
+  transition: color 0.2s, background 0.2s, border-color 0.2s;
+}
+
+a.button.signup2:hover:after,
+button.signup2:hover:after,
+.add-to-bag button:hover:after {
+  border-left-color: #e71836;
+  padding-right: 5px;
+}
+
+
+/* First CTA row of Desktop*/
+
+.FS-SHOW-DESKTOP>div>div.wrapper:nth-child(1)>div>div:nth-child(2) {
+  position: absolute;
+  left: 0px;
+  top: 0px;
+}
+
+@font-face {
+  font-family: 'GothamMedium';
+  src: url("font/Gotham-Medium.otf") format("opentype");
+}
+
+@font-face {
+  font-family: 'GothamMedium';
+  src: url("https://www.lechateau.com/style/html/landing/assets/font/Gotham-Medium.otf") format("opentype");
+}
+
+@font-face {
+  font-family: 'GothamMedium';
+  src: url("font/Gotham-Medium.otf") format("opentype");
+}
+
+.gothamMed {
+  font-family: 'GothamMedium';
+  font-size: 13px;
+  letter-spacing: 2px;
+}
+
+.underlineCTA {
+  text-decoration: underline;
+  color: black;
+}
+
+.underlineCTA:hover {
+  color: #373b37;
+}
+
+
+/* Instagram */
+
+.testinsta div {
+  flex: 1 0;
+  -webkit-flex: 1 0;
+  -moz-flex: 1 0;
+  -ms-flex: 1 0;
+}
+
+.testinsta div:not(:last-child) {
+  padding-right: 15px;
+}
+
+.testinsta {
+  display: flex;
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  justify-content: space-between;
+  -webkit-justify-content: space-between;
+  -moz-justify-content: space-between;
+  -ms-justify-content: space-between;
+  flex-wrap: wrap;
+  -webkit-flex-wrap: wrap;
+  -moz-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-flow: row wrap;
+  -webkit-flex-flow: row wrap;
+  -moz-flex-flow: row wrap;
+  -ms-flex-flow: row wrap;
+  max-width: 2000px;
+  width: 100%;
+}
+
+
+/* Sliders */
+
+#masterslider .ms-inner-controls-cont {
+  width: 100%;
+  max-width: 960px !important;
+}
+
+.ms-skin-default .ms-nav-next {
+  background: url(https://www.lechateau.com/style/html/landing/editorial/lookbooks/2017/lily/right-arrow-lc.svg);
+  background-repeat: no-repeat;
+  opacity: 1 !important;
+  right: 0px;
+}
+
+.ms-skin-default .ms-nav-prev {
+  background: url(https://www.lechateau.com/style/html/landing/editorial/lookbooks/2017/lily/left-arrow-lc.svg);
+  background-repeat: no-repeat;
+  opacity: 1 !important;
+  left: 0px;
+}
+
+.ms-ctrl-hide {
+  opacity: 1;
+}
+#mastersliderInstaM .ms-bullets.ms-dir-h {
+  bottom: -40px;
+  right: 40%;
+}
+
+#mastersliderInstaT .ms-bullets.ms-dir-h {
+  bottom: -40px;
+}
+
+.ms-inner-controls-cont {
+  margin-bottom: 35px;
+}
+
+.ms-skin-default .ms-bullet-selected {
+  background-position: -34px -85px;
+}
+
+#mastersliderInstaM .ms-inner-controls-cont {
+  max-width: 591px !important;
+  margin-left: -50px;
+}
+
+#mastersliderInstaM .ms-view {
+  width: 591px !important;
+  margin-left: 0px;
+}
+
+#mastersliderInstaT .ms-inner-controls-cont {
+  max-width: 768px !important;
+  margin-left: 0px;
+}
+
+#mastersliderInstaT .ms-view {
+  width: 768px !important;
+  margin-left: 0px;
+}
+</style>
+
+</head>
+<body>
+
+    
+    <br/><br/><div style="width:100%; background-color:rgba(147,147,147,1.00); text-align:center; font-size:30px;"><strong>DESKTOP</strong></div><br/><br/> -->
+
+    <div>
+
+      <div class="FS-SHOW-DESKTOP">
+
+        <!-- Start DESKTOP -->
+        <div style="max-width:2000px; margin-left:auto; margin-right:auto;"> 
+           {{Desktop}}
+		   
+		   {{#english}}
+  
+		    <!-- ROW DESKTOP SOCIAL START -->
+				<!-- Instagram -->
+				<div class="testinsta" style="max-width:2000px; margin-bottom: 145px;">
+				  <div>
+				    <a target="_blank" href="https://www.instagram.com/lechateau/" title="Follow LE CHÂTEAU on Instagram">
+					  <img src="https://lechateau.scene7.com/is/image/LeChateau/instagram-180425-01?$jpeg-full$&amp;qlt=94&amp;ver=1.0">
+					</a>
+				  </div>
+				  
+				  <div>
+				    <a target="_blank" href="https://www.instagram.com/lechateau/" title="Follow LE CHÂTEAU on Instagram">
+					  <img src="https://lechateau.scene7.com/is/image/LeChateau/instagram-180425-02?$jpeg-full$&amp;qlt=94&amp;ver=1.0">
+					</a>
+				  </div>
+				  
+				  <div>
+				    <a target="_blank" href="https://www.instagram.com/lechateau/" title="Follow LE CHÂTEAU on Instagram">
+					  <img src="https://lechateau.scene7.com/is/image/LeChateau/instagram-180425-03?$jpeg-full$&amp;qlt=94&amp;ver=1.0">
+					</a>
+				  </div>
+
+					  <div>
+				    <a target="_blank" href="https://www.instagram.com/lechateau/" title="Follow LE CHÂTEAU on Instagram">
+					  <img src="https://lechateau.scene7.com/is/image/LeChateau/instagram-180425-04?$jpeg-full$&amp;qlt=94&amp;ver=1.0">
+					</a>
+				  </div>			  
+				</div>				
+		      <!-- ROW DESKTOP SOCIAL END --> 	
+		
+		
+              <!-- ROW OUTLET DESKTOP START -->
+				<div class="wrapper" style="max-width: 2000px;margin-bottom:170px">
+				  <div class="lp-container-FB" style="height:450px;">
+				    <!-- Change BACKGROUND IMAGE here -->
+					  <div class="lp-bkg backgroundpos-outlet" style="background-image: url(https://lechateau.scene7.com/is/image/LeChateau/outlet-180416-en-d?$jpeg-full$);">
+					    <div style="width:100%;">
+						  <!-- Change LINK here -->
+						    <a target="_top" title="Outlet New Additions, Up To 70% Off" href="https://www.lechateau.com/style/jump/OUTLET+/category/cat37310715">                                        
+							  <img src="https://www.lechateau.com/style/html/landing/assets/images/blank.png" width="100%" alt="Outlet New Additions, Up To 70% Off" style="height:450px; " />                                     
+							</a>
+						</div>
+					  </div>
+					  <div class="wrapper" style="max-width: 2000px;position:relative; top:322px; left: 0px; z-index:1;width: 100%;text-align: center;">
+					    <a target="_top" class="btn-lc secondary" style="position: relative;top: 160px;left: 0px; z-index: 2;" title="Outlet New Additions, Up To 70% Off" href="https://www.lechateau.com/style/jump/OUTLET+/category/cat37310715">
+						  SHOP OUTLET
+						</a>
+						<div class="txt-fp text-black" style="position:relative;top: 178px; padding-bottom: 20px;">
+						*Select styles, prices as marked.
+						</div>
+					  </div>
+					</div>
+				</div>
+				<!-- ROW OUTLET DESKTOP END -->		
+		   {{/english}}
+		   
+		   {{#french}}
+		
+		    <!-- ROW DESKTOP SOCIAL START -->
+				<!-- Instagram -->
+				<div class="testinsta" style="max-width:2000px; margin-bottom: 145px;">
+				  <div>
+				    <a target="_blank" href="https://www.instagram.com/lechateau/" title="Suivez LE CHÂTEAU sur instagram">
+					  <img src="https://lechateau.scene7.com/is/image/LeChateau/instagram-180425-01?$jpeg-full$&amp;qlt=94&amp;ver=1.0">
+					</a>
+				  </div>
+				  
+				  <div>
+				    <a target="_blank" href="https://www.instagram.com/lechateau/" title="Suivez LE CHÂTEAU sur instagram">
+					  <img src="https://lechateau.scene7.com/is/image/LeChateau/instagram-180425-02?$jpeg-full$&amp;qlt=94&amp;ver=1.0">
+					</a>
+				  </div>
+				  
+				  <div>
+				    <a target="_blank" href="https://www.instagram.com/lechateau/" title="Suivez LE CHÂTEAU sur instagram">
+					  <img src="https://lechateau.scene7.com/is/image/LeChateau/instagram-180425-03?$jpeg-full$&amp;qlt=94&amp;ver=1.0">
+					</a>
+				  </div>
+
+					  <div>
+				    <a target="_blank" href="https://www.instagram.com/lechateau/" title="Suivez LE CHÂTEAU sur instagram">
+					  <img src="https://lechateau.scene7.com/is/image/LeChateau/instagram-180425-04?$jpeg-full$&amp;qlt=94&amp;ver=1.0">
+					</a>
+				  </div>			  
+				</div>				
+		      <!-- ROW DESKTOP SOCIAL END --> 
+		
+			  <!-- ROW OUTLET DESKTOP START -->
+				<div class="wrapper" style="max-width: 2000px;margin-bottom:170px">
+				  <div class="lp-container-FB" style="height:450px;">
+				    <!-- Change BACKGROUND IMAGE here -->
+					<div class="lp-bkg backgroundpos-outlet" style="background-image: url(https://lechateau.scene7.com/is/image/LeChateau/outlet-180416-fr-d?$jpeg-full$);">
+					  <div style="width:100%;">
+						<!-- Change LINK here -->
+						<a target="_top" title="Nouveaux ajouts à l'entrepôt - jusqu'à 70 % de rabais" href="https://www.lechateau.com/style/jump/OUTLET+/category/cat37310715">
+						  <img src="https://www.lechateau.com/style/html/landing/assets/images/blank.png" width="100%" alt="Nouveaux ajouts à l'entrepôt - jusqu'à 70 % de rabais" style="height:450px; " />
+						</a>
+					  </div>
+					</div>
+					<div class="wrapper" style="max-width: 2000px;position:relative; top:322px; left: 0px; z-index:1;width: 100%;text-align: center;">
+					  <a target="_top" class="btn-lc secondary" style="position: relative;top: 160px;left: 0px; z-index: 2;" title="Nouveaux ajouts à l'entrepôt - jusqu'à 70 % de rabais" href="https://www.lechateau.com/style/jump/OUTLET+/category/cat37310715">
+						MAGASINEZ À L'ENTREPÔT
+					  </a>
+					  <div class="txt-fp text-black" style="position:relative;top: 178px; padding-bottom: 20px;">
+					    *Styles sélectionnés, prix tels qu'indiqués.
+					  </div>
+					</div>
+				  </div>
+				</div>
+			  <!-- ROW OUTLET DESKTOP END -->	   
+		   {{/french}}
+		   
+			
+         </div>  
+       </div>
+       <!-- END DESKTOP -->
+            
+        <br/><br/><div style="width:100%; background-color:rgba(147,147,147,1.00); text-align:center; font-size:30px;"><strong>TABLET</strong></div><br/><br/>-->
+            
+        <div class="FS-SHOW-TABLE">
+          <!-- Start TABLET -->
+          <div style="max-width:768px;">
+            {{Tablet}}
+			
+		    {{#english}}
+			<!-- ROW #INSTA TAB START  -->
+			<div class="wrapper" style="text-align:center; margin-bottom:146px;max-width: 768px;">
+				<!-- masterslider -->
+				<div class="master-slider ms-skin-default" id="mastersliderInstaT" style="with:100%;">
+					
+					<!-- new slide -->
+					<div class="ms-slide" data-fill-mode="fill" data-delay="2">
+						<!-- slide background -->
+						<img src="https://lechateau.scene7.com/is/image/LeChateau/blank-1?$png-full$&qlt=100" data-src="https://lechateau.scene7.com/is/image/LeChateau/instagram-180425-01?$jpeg-full$&amp;qlt=94&amp;ver=1.0" alt="Follow LE CHÂTEAU on Instagram" />
+						<!-- slide text layer -->
+						<div class="ms-layer ms-caption" style="top:100px; left:50px;" data-fixed="true"></div>
+						<!-- linked slide -->	
+						<a target="_blank" title="Follow LE CHÂTEAU on Instagram" href="https://www.instagram.com/lechateau/">LE CH&Acirc;TEAU</a>
+					</div>
+					<!-- end of slide -->
+					
+					<!-- new slide -->
+					<div class="ms-slide" data-fill-mode="fill" data-delay="2">
+						<!-- slide background -->
+						<img src="https://lechateau.scene7.com/is/image/LeChateau/blank-1?$png-full$&qlt=100" data-src="https://lechateau.scene7.com/is/image/LeChateau/instagram-180425-02?$jpeg-full$&amp;qlt=94&amp;ver=1.0" alt="Follow LE CHÂTEAU on Instagram" />
+						<!-- slide text layer -->
+						<div class="ms-layer ms-caption" style="top:100px; left:50px;" data-fixed="true"></div>
+						<!-- linked slide -->	
+						<a target="_blank" title="Follow LE CHÂTEAU on Instagram" href="https://www.instagram.com/lechateau/">LE CH&Acirc;TEAU</a>
+					</div>
+					<!-- end of slide -->
+					
+					<!-- new slide -->
+					<div class="ms-slide" data-fill-mode="fill" data-delay="2">
+						<!-- slide background -->
+						<img src="https://lechateau.scene7.com/is/image/LeChateau/blank-1?$png-full$&qlt=100" data-src="https://lechateau.scene7.com/is/image/LeChateau/instagram-180425-03?$jpeg-full$&amp;qlt=94&amp;ver=1.0" alt="Follow LE CHÂTEAU on Instagram" />
+						<!-- slide text layer -->
+						<div class="ms-layer ms-caption" style="top:100px; left:50px;" data-fixed="true"></div>
+						<!-- linked slide -->	
+						<a target="_blank" title="Follow LE CHÂTEAU on Instagram" href="https://www.instagram.com/lechateau/">LE CH&Acirc;TEAU</a>
+					</div>
+					<!-- end of slide -->
+					
+					<!-- new slide -->
+					<div class="ms-slide" data-fill-mode="fill" data-delay="2">
+						<!-- slide background -->
+						<img src="https://lechateau.scene7.com/is/image/LeChateau/blank-1?$png-full$&qlt=100" data-src="https://lechateau.scene7.com/is/image/LeChateau/instagram-180425-04?$jpeg-full$&amp;qlt=94&amp;ver=1.0" alt="Follow LE CHÂTEAU on Instagram" />
+						<!-- slide text layer -->
+						<div class="ms-layer ms-caption" style="top:100px; left:50px;" data-fixed="true"></div>
+						<!-- linked slide -->	
+						<a target="_blank" title="Follow LE CHÂTEAU on Instagram" href="https://www.instagram.com/lechateau/">LE CH&Acirc;TEAU</a>
+					</div>
+					<!-- end of slide -->
+				</div>
+				
+			</div>
+			<!-- ROW #INSTA TAB END -->
+
+			<!-- ROW TABLET OUTLET START -->
+			<div class="wrapper" style="text-align:center; margin-bottom:74px;">
+			  <a target="_top" title="Outlet New Additions, Up To 70% Off" href="//www.lechateau.com/style/jump/OUTLET+/category/cat37310715">
+			    <img src="https://lechateau.scene7.com/is/image/LeChateau/outlet-180316-en-t-v2?$jpeg-full$" width="100%" alt="Outlet New Additions, Up To 70% Off" />
+			  </a>
+			  <div class="txt-fp text-black" style="text-align:center;">*Select styles, prices as marked.</div>
+			</div>
+			<!-- ROW TABLET OUTLET END -->			
+		   {{/english}}
+		   
+		   {{#french}}  	
+		   <!-- ROW #INSTA TAB START  -->
+			<div class="wrapper" style="text-align:center; margin-bottom:146px;max-width: 768px;">
+				<!-- masterslider -->
+				<div class="master-slider ms-skin-default" id="mastersliderInstaT" style="with:100%;">
+					
+					<!-- new slide -->
+					<div class="ms-slide" data-fill-mode="fill" data-delay="2">
+						<!-- slide background -->
+						<img src="https://lechateau.scene7.com/is/image/LeChateau/blank-1?$png-full$&qlt=100" data-src="https://lechateau.scene7.com/is/image/LeChateau/instagram-180425-01?$jpeg-full$&amp;qlt=94&amp;ver=1.0" alt="Follow LE CHÂTEAU on Instagram" />
+						<!-- slide text layer -->
+						<div class="ms-layer ms-caption" style="top:100px; left:50px;" data-fixed="true"></div>
+						<!-- linked slide -->	
+						<a target="_blank" title="Suivez LE CHÂTEAU sur instagram" href="https://www.instagram.com/lechateau/">LE CH&Acirc;TEAU</a>
+					</div>
+					<!-- end of slide -->
+					
+					<!-- new slide -->
+					<div class="ms-slide" data-fill-mode="fill" data-delay="2">
+						<!-- slide background -->
+						<img src="https://lechateau.scene7.com/is/image/LeChateau/blank-1?$png-full$&qlt=100" data-src="https://lechateau.scene7.com/is/image/LeChateau/instagram-180425-02?$jpeg-full$&amp;qlt=94&amp;ver=1.0" alt="Follow LE CHÂTEAU on Instagram" />
+						<!-- slide text layer -->
+						<div class="ms-layer ms-caption" style="top:100px; left:50px;" data-fixed="true"></div>
+						<!-- linked slide -->	
+						<a target="_blank" title="Suivez LE CHÂTEAU sur instagram" href="https://www.instagram.com/lechateau/">LE CH&Acirc;TEAU</a>
+					</div>
+					<!-- end of slide -->
+					
+					<!-- new slide -->
+					<div class="ms-slide" data-fill-mode="fill" data-delay="2">
+						<!-- slide background -->
+						<img src="https://lechateau.scene7.com/is/image/LeChateau/blank-1?$png-full$&qlt=100" data-src="https://lechateau.scene7.com/is/image/LeChateau/instagram-180425-03?$jpeg-full$&amp;qlt=94&amp;ver=1.0" alt="Follow LE CHÂTEAU on Instagram" />
+						<!-- slide text layer -->
+						<div class="ms-layer ms-caption" style="top:100px; left:50px;" data-fixed="true"></div>
+						<!-- linked slide -->	
+						<a target="_blank" title="Suivez LE CHÂTEAU sur instagram" href="https://www.instagram.com/lechateau/">LE CH&Acirc;TEAU</a>
+					</div>
+					<!-- end of slide -->
+					
+					<!-- new slide -->
+					<div class="ms-slide" data-fill-mode="fill" data-delay="2">
+						<!-- slide background -->
+						<img src="https://lechateau.scene7.com/is/image/LeChateau/blank-1?$png-full$&qlt=100" data-src="https://lechateau.scene7.com/is/image/LeChateau/instagram-180425-04?$jpeg-full$&amp;qlt=94&amp;ver=1.0" alt="Follow LE CHÂTEAU on Instagram" />
+						<!-- slide text layer -->
+						<div class="ms-layer ms-caption" style="top:100px; left:50px;" data-fixed="true"></div>
+						<!-- linked slide -->	
+						<a target="_blank" title="Suivez LE CHÂTEAU sur instagram" href="https://www.instagram.com/lechateau/">LE CH&Acirc;TEAU</a>
+					</div>
+					<!-- end of slide -->
+				</div>
+				
+			</div>
+			<!-- ROW #INSTA TAB END -->
+			
+			<!-- ROW TABLET OUTLET START -->
+			  <div class="wrapper" style="text-align:center; margin-bottom:74px;">
+			    <a target="_top" title="Nouveaux ajouts à l'entrepôt - jusqu'à 70 % de rabais" href="//www.lechateau.com/style/jump/OUTLET+/category/cat37310715"> 					  
+				  <img src="https://lechateau.scene7.com/is/image/LeChateau/outlet-180316-fr-t-v2?$jpeg-full$" width="100%" alt="Nouveaux ajouts à l'entrepôt - jusqu'à 70 % de rabais" /> 				
+				</a>
+				<div class="txt-fp text-black" style="text-align:center;">*Styles sélectionnés, prix tels qu'indiqués.</div>
+			  </div>
+			<!-- ROW TABLET OUTLET END -->
+		   {{/french}}
+		   
+          </div>
+        </div>
+        <!-- End TABLET -->
+                
+        <br/><br/><div style="width:100%; background-color:rgba(147,147,147,1.00); text-align:center; font-size:30px;"><strong>MOBILE DEVICES</strong></div><br/><br/>-->
+        
+        <div class="FS-SHOW-MOBIL">
+        <!-- Start MOBILE -->
+          <div style="max-width:591px;">       
+           {{Mobile}} 
+
+		   {{#english}}
+			<!-- ROW #INSTA MOB START  -->
+			  <div class="wrapper" style="text-align:center; margin-bottom: 146px; max-width: 591px;">
+				<!-- masterslider -->
+				<div class="master-slider ms-skin-default" id="mastersliderInstaM" style="with:100%;">
+					
+					<!-- new slide -->
+					<div class="ms-slide" data-fill-mode="fill" data-delay="2">
+						<!-- slide background -->
+						<img src="https://lechateau.scene7.com/is/image/LeChateau/blank-1?$png-full$&qlt=100" data-src="https://lechateau.scene7.com/is/image/LeChateau/instagram-180425-01?$jpeg-full$&amp;qlt=94&amp;ver=1.0" alt="Follow LE CHÂTEAU on Instagram" />
+						<!-- slide text layer -->
+						<div class="ms-layer ms-caption" style="top:100px; left:50px;" data-fixed="true"></div>
+						<!-- linked slide -->	
+						<a target="_blank" title="Follow LE CHÂTEAU on Instagram" href="https://www.instagram.com/lechateau/">LE CH&Acirc;TEAU</a>
+					</div>
+					<!-- end of slide -->
+					
+					<!-- new slide -->
+					<div class="ms-slide" data-fill-mode="fill" data-delay="2">
+						<!-- slide background -->
+						<img src="https://lechateau.scene7.com/is/image/LeChateau/blank-1?$png-full$&qlt=100" data-src="https://lechateau.scene7.com/is/image/LeChateau/instagram-180425-02?$jpeg-full$&amp;qlt=94&amp;ver=1.0" alt="Follow LE CHÂTEAU on Instagram" />
+						<!-- slide text layer -->
+						<div class="ms-layer ms-caption" style="top:100px; left:50px;" data-fixed="true"></div>
+						<!-- linked slide -->	
+						<a target="_blank" title="Follow LE CHÂTEAU on Instagram" href="https://www.instagram.com/lechateau/">LE CH&Acirc;TEAU</a>
+					</div>
+					<!-- end of slide -->
+					
+					<!-- new slide -->
+					<div class="ms-slide" data-fill-mode="fill" data-delay="2">
+						<!-- slide background -->
+						<img src="https://lechateau.scene7.com/is/image/LeChateau/blank-1?$png-full$&qlt=100" data-src="https://lechateau.scene7.com/is/image/LeChateau/instagram-180425-03?$jpeg-full$&amp;qlt=94&amp;ver=1.0" alt="Follow LE CHÂTEAU on Instagram" />
+						<!-- slide text layer -->
+						<div class="ms-layer ms-caption" style="top:100px; left:50px;" data-fixed="true"></div>
+						<!-- linked slide -->	
+						<a target="_blank" title="Follow LE CHÂTEAU on Instagram" href="https://www.instagram.com/lechateau/">LE CH&Acirc;TEAU</a>
+					</div>
+					<!-- end of slide -->
+					
+					<!-- new slide -->
+					<div class="ms-slide" data-fill-mode="fill" data-delay="2">
+						<!-- slide background -->
+						<img src="https://lechateau.scene7.com/is/image/LeChateau/blank-1?$png-full$&qlt=100" data-src="https://lechateau.scene7.com/is/image/LeChateau/instagram-180425-04?$jpeg-full$&amp;qlt=94&amp;ver=1.0" alt="Follow LE CHÂTEAU on Instagram" />
+						<!-- slide text layer -->
+						<div class="ms-layer ms-caption" style="top:100px; left:50px;" data-fixed="true"></div>
+						<!-- linked slide -->	
+						<a target="_blank" title="Follow LE CHÂTEAU on Instagram" href="https://www.instagram.com/lechateau/">LE CH&Acirc;TEAU</a>
+					</div>
+					<!-- end of slide -->
+				</div>
+				
+			  </div>
+			<!-- ROW #INSTA MOB END -->		
+			
+		     <!-- ROW MOBILE OUTLET START -->
+			  <div class="wrapper" style="text-align:center; margin-bottom: 74px;">
+			    <a target="_top" title="Outlet New Additions, Up To 70% Off" href="//www.lechateau.com/style/jump/OUTLET+/category/cat37310715">    
+				  <img src="https://lechateau.scene7.com/is/image/LeChateau/outlet-180316-en-m-v2?$jpeg-full$" width="100%" alt="Outlet New Additions, Up To 70% Off" />                 
+				</a>
+				<div class="txt-fp text-black" style="text-align:center;">*Select styles, prices as marked.</div>
+			   </div>
+			 <!-- ROW MOBILE OUTLET END --> 			   
+		   {{/english}}
+		   
+		   {{#french}}
+		   <!-- ROW #INSTA MOB START  -->
+			<div class="wrapper" style="text-align:center; margin-bottom:146px;max-width: 591px;">
+				<!-- masterslider -->
+				<div class="master-slider ms-skin-default" id="mastersliderInstaM" style="with:100%;">
+					
+					<!-- new slide -->
+					<div class="ms-slide" data-fill-mode="fill" data-delay="2">
+						<!-- slide background -->
+						<img src="https://lechateau.scene7.com/is/image/LeChateau/blank-1?$png-full$&qlt=100" data-src="https://lechateau.scene7.com/is/image/LeChateau/instagram-180425-01?$jpeg-full$&amp;qlt=94&amp;ver=1.0" alt="Follow LE CHÂTEAU on Instagram" />
+						<!-- slide text layer -->
+						<div class="ms-layer ms-caption" style="top:100px; left:50px;" data-fixed="true"></div>
+						<!-- linked slide -->	
+						<a target="_blank" title="Suivez LE CHÂTEAU sur instagram" href="https://www.instagram.com/lechateau/">LE CH&Acirc;TEAU</a>
+					</div>
+					<!-- end of slide -->
+					
+					<!-- new slide -->
+					<div class="ms-slide" data-fill-mode="fill" data-delay="2">
+						<!-- slide background -->
+						<img src="https://lechateau.scene7.com/is/image/LeChateau/blank-1?$png-full$&qlt=100" data-src="https://lechateau.scene7.com/is/image/LeChateau/instagram-180425-02?$jpeg-full$&amp;qlt=94&amp;ver=1.0" alt="Follow LE CHÂTEAU on Instagram" />
+						<!-- slide text layer -->
+						<div class="ms-layer ms-caption" style="top:100px; left:50px;" data-fixed="true"></div>
+						<!-- linked slide -->	
+						<a target="_blank" title="Suivez LE CHÂTEAU sur instagram" href="https://www.instagram.com/lechateau/">LE CH&Acirc;TEAU</a>
+					</div>
+					<!-- end of slide -->
+					
+					<!-- new slide -->
+					<div class="ms-slide" data-fill-mode="fill" data-delay="2">
+						<!-- slide background -->
+						<img src="https://lechateau.scene7.com/is/image/LeChateau/blank-1?$png-full$&qlt=100" data-src="https://lechateau.scene7.com/is/image/LeChateau/instagram-180425-03?$jpeg-full$&amp;qlt=94&amp;ver=1.0" alt="Follow LE CHÂTEAU on Instagram" />
+						<!-- slide text layer -->
+						<div class="ms-layer ms-caption" style="top:100px; left:50px;" data-fixed="true"></div>
+						<!-- linked slide -->	
+						<a target="_blank" title="Suivez LE CHÂTEAU sur instagram" href="https://www.instagram.com/lechateau/">LE CH&Acirc;TEAU</a>
+					</div>
+					<!-- end of slide -->
+					
+					<!-- new slide -->
+					<div class="ms-slide" data-fill-mode="fill" data-delay="2">
+						<!-- slide background -->
+						<img src="https://lechateau.scene7.com/is/image/LeChateau/blank-1?$png-full$&qlt=100" data-src="https://lechateau.scene7.com/is/image/LeChateau/instagram-180425-04?$jpeg-full$&amp;qlt=94&amp;ver=1.0" alt="Follow LE CHÂTEAU on Instagram" />
+						<!-- slide text layer -->
+						<div class="ms-layer ms-caption" style="top:100px; left:50px;" data-fixed="true"></div>
+						<!-- linked slide -->	
+						<a target="_blank" title="Suivez LE CHÂTEAU sur instagram" href="https://www.instagram.com/lechateau/">LE CH&Acirc;TEAU</a>
+					</div>
+					<!-- end of slide -->
+				</div>
+				
+			</div>
+			<!-- ROW #INSTA MOB END -->
+			
+		    <!-- ROW MOBILE OUTLET START -->
+			  <div class="wrapper" style="text-align:center; margin-bottom: 74px;">
+			    <a target="_top" title="Nouveaux ajouts à l'entrepôt - jusqu'à 70 % de rabais" href="//www.lechateau.com/style/jump/OUTLET+/category/cat37310715">    
+				  <img src="https://lechateau.scene7.com/is/image/LeChateau/outlet-180316-fr-m-v2?$jpeg-full$" width="100%" alt="Nouveaux ajouts à l'entrepôt - jusqu'à 70 % de rabais" />                 
+				</a>
+				<div class="txt-fp text-black" style="text-align:center;">*Styles sélectionnés, prix tels qu'indiqués.</div>
+			  </div>
+		    <!-- ROW MOBILE OUTLET END -->		   
+		   {{/french}}	
+		   
+          </div>
+        </div> 
+        <!-- End MOBILE -->
+       	   
+    </div>
+    
+<script src="https://www.lechateau.com/style/html/landing/assets/js/jquery.rwdImageMaps.min.js"></script>
+
+<script type="text/javascript"> 
+$(document).ready(function(e) {
+	$('img[usemap]').rwdImageMaps();
+});
+  
+(function l(d){
+	var site = '5949', page = 'Le_Chateau_Homepage', s, er = d.createElement('script');
+	er.type = 'text/javascript';
+	er.async = true;
+	er.src = '//o2.eyereturn.com/?site=' + site + '&page=' + page;
+	s = d.getElementsByTagName('script')[0];
+	s.parentNode.insertBefore(er, s);
+})(document);
+</script>
+
+<!-- INSTA CAROUSEL -->
+<script>
+
+var Preimages = [];
+function preload() {
+    for (var i = 0; i < arguments.length; i++) {
+        Preimages[i] = new Image();
+        Preimages[i].src = preload.arguments[i];
+    }
+}
+
+//-- usage --//
+preload(
+    "https://lechateau.scene7.com/is/image/LeChateau/instagram-180425-01?$jpeg-full$&amp;qlt=94&amp;ver=1.0",
+    "https://lechateau.scene7.com/is/image/LeChateau/instagram-180425-02?$jpeg-full$&amp;qlt=94&amp;ver=1.0",
+    "https://lechateau.scene7.com/is/image/LeChateau/instagram-180425-03?$jpeg-full$&amp;qlt=94&amp;ver=1.0",
+	"https://lechateau.scene7.com/is/image/LeChateau/instagram-180425-04?$jpeg-full$&amp;qlt=94&amp;ver=1.0"
+)
+
+$(document).ready(function(e) {	
+       // tablet
+		var instasliderTab = new MasterSlider();
+		instasliderTab.setup('mastersliderInstaT', {
+			width: 470, // slider standard width
+			height: 495, // slider standard height
+			loop: true,
+			space: 15,
+			autoplay: false,
+			instantStartLayers: false,
+			layout: 'partialview',
+			fillMode: 'center',
+			controls: {
+				arrows: {
+					autohide: false
+				},
+				bullets: {}
+				// more slider controls...
+			}
+		});
+
+		instasliderTab.control('bullets', {
+			autohide: false,
+			dir: "h",
+			margin: "30px"
+
+		});
+		
+		// mobile
+		var instasliderMob = new MasterSlider();
+		instasliderMob.setup('mastersliderInstaM', {
+			width: 470, // slider standard width
+			height: 495, // slider standard height
+			loop: true,
+			space: 15,
+			autoplay: false,
+			instantStartLayers: true,
+			layout: 'partialview',
+			fillMode: 'center',
+			controls: {
+				bullets: {}
+				// more slider controls...
+			}
+		});
+		
+		instasliderMob.control('bullets', {
+			autohide: false,
+			dir: "h",
+			margin: "30px"
+		});
+
+ });
+ 
+ // resizing
+ $(window).resize(function() {  
+  $(".ms-slide-bgcont img").css({
+	  "height": "100%",
+	  "width": "auto",
+	   "margin-top": "5px"
+	});
+ });
+</script>
+ 
+ 
+</body>
+</html>

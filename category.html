@@ -1,0 +1,21 @@
+<div class="container" id="CatBanners" ng-controller="CatCtrl">
+    <h3>Category Banners</h3>
+    
+    <h7>Choose a template</h7><br></br>
+    <button ng-repeat='x in typeTmplt' ng-click='getForm($event)' data-form="{{x.form}}"data-template="{{x.template}}" class="btn btn-default btn-category">{{x.name}}</button>
+    
+    <div id="form-cat"></div>
+    <div id="cat-result">
+        
+        <div>
+          <button onclick="selectResult(this)" data-lang='eng' class="btn btn-info btn-xs glyphicon glyphicon-circle-arrow-down"></button><h7>English</h7><br>
+          <textarea class="eng"></textarea>
+        </div>
+        
+        <div>
+          <button onclick="selectResult(this)" data-lang='fr' class="btn btn-info btn-xs glyphicon glyphicon-circle-arrow-down"></button><h7>French</h7><br>
+          <textarea class="fr"></textarea>
+        </div>
+
+    </div>
+</div>

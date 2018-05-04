@@ -1,0 +1,55 @@
+<div class="container" id="MenuBanners" ng-controller="MenuBanners">
+    <h3>Menu Banners</h3>
+
+    <div class="col-md-6">
+        <form id="menuForm" class="form-group">
+            <label>Enter Link :</label>
+            <input type="text" ng-model="link" placeholder="Link" class="form-control">
+            <br><br>
+            
+            <h4>English</h4>
+            <hr>
+            <label>Image Path</label>
+            <input type="text" name="imgENG" ng-model="imgENG" placeholder="https://www..." class="form-control" onchange='imgChange(this)'>
+            <input type='checkbox' value='' checked=''>In Scene 7<span class="glyphicon glyphicon-eye-open"></span>
+            <br><br>
+            <label>SEO</label>
+            <input type="text" name="altENG" ng-model="altENG" placeholder="Enter English SEO" class="form-control"><br><br>
+            
+            <h4>French</h4>
+            <hr>
+            <label>Image Path</label>
+            <input type="text" name="imgFR" ng-model="imgFR" placeholder="https://www..." class="form-control" onchange='imgChange(this)'>
+            <input type='checkbox' value='' checked=''>In Scene 7<span class="glyphicon glyphicon-eye-open"></span>
+            <br><br>
+            <label>SEO</label>
+            <input type="text" name="altFR" ng-model="altFR" placeholder="Enter French SEO" class="form-control">
+        </form>
+        
+        <br><br>
+        
+        <div class="row">
+            <button onclick="selectResult(this)" data-lang='eng' class="btn btn-info btn-xs glyphicon glyphicon-circle-arrow-down"></button><h7>English</h7><br>
+            <textarea id="menu-eng">
+                <a href="{{link}}" title="{{altENG}}">
+                    <img id="mensmenubanner" border="0" alt="{{altENG}}" src="{{imgENG}}">
+                </a>
+            </textarea>
+        </div>    
+        
+        <div class="row">
+            <button onclick="selectResult(this)" data-lang='eng' class="btn btn-info btn-xs glyphicon glyphicon-circle-arrow-down"></button><h7>French</h7><br>
+            <textarea id="menu-fr">
+                <a href="{{link}}" title="{{altFR}}">
+                    <img id="mensmenubanner" border="0" alt="{{altFR}}" src="{{imgFR}}">
+                </a>
+            </textarea>
+        </div>
+    </div>
+
+    
+    <div class="col-md-6">
+        <menu-preview></menu-preview>
+    </div>
+
+</div>

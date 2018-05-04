@@ -1,0 +1,43 @@
+<!--  This is the template for the form of the Landing Page  -->
+<!-- Use the angular controller ( LPCtrl ) for the functions -->
+
+<div class="container landingImage" data-type="custom-html">
+
+    <div class="row options"> 
+        <h7 data-toggle="tooltip" data-placement="left" title="" >Content type: Custom HTML</h7>
+        <form-options></form-options>
+    </div>
+    
+    <div class="row">
+        <p>Show on</p>
+         <label class="checkbox-inline">
+          <input type="checkbox" name="checkDesktop" checked>Desktop
+        </label>
+        <label class="checkbox-inline">
+          <input type="checkbox" name="checkTab" checked>Tablet
+        </label>
+        <label class="checkbox-inline">
+          <input type="checkbox" name="checkMob">Mobile
+        </label>
+    </div>
+
+    <div class="row" data-lang="eng">
+        <h4>English</h4>
+        <div class="row">
+            <textarea class="col-md-12 form-control" rows="6" name="codeENG"></textarea>
+        </div>
+    </div>
+
+
+    <div class="row" data-lang="fr">
+        <h4>French</h4>
+        <div class="row">
+            <textarea class="col-md-12 form-control" rows="6" name="codeFR"></textarea>
+        </div>
+    </div>
+    
+   <div class="row options">
+     <close-form></close-form>
+    </div>
+
+</div>

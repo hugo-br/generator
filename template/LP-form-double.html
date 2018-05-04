@@ -1,0 +1,102 @@
+<div class="container landingImage" data-type="multiple">
+
+    <div class="row options">
+        <h7 data-toggle="tooltip" data-placement="left" title="" >Content type: 2 images side by side (1 on Left, 1 on Right)</h7>
+        <form-options></form-options>
+    </div>
+    
+    <div class="row">
+     <h4>Left Image</h4>
+
+       <div class="row">
+            <label class="col-md-2">English Image</label>
+            <input class="col-md-6" name="pathImgLeftENG" type="text" placeholder="http://lechateau.scene7.com/is/image/LeChateau/" onblur="imgChange(this)" data-height="0">
+            <input type="checkbox" value="" checked> In Scene 7 <span class="glyphicon glyphicon-eye-open"></span>
+        </div>
+        
+        <div class="row">
+            <label class="col-md-2">English SEO</label>
+            <input class="col-md-6" name="seoLeftENG" type="text" name="title" placeholder="Enter ENGLISH SEO for left image">
+        </div>
+        
+        <div class="row">
+            <label class="col-md-2">French Image</label>
+            <input class="col-md-6" name="pathImgLeftFR" type="text" placeholder="http://lechateau.scene7.com/is/image/LeChateau/" onblur="imgChange(this)" data-height="0">
+            <input type="checkbox" value="" checked> In Scene 7 <span class="glyphicon glyphicon-eye-open"></span>
+        </div>
+        
+        <div class="row">
+            <label class="col-md-2">French SEO</label>
+            <input class="col-md-6" name="seoLeftFR" type="text" name="alt" placeholder="Enter FRENCH SEO for left image">
+        </div>
+
+        <div class="row">
+            <label class="col-md-2">Link for LEFT image</label>
+            <input class="col-md-6" name="linkImgLeft" type="text" name="link" placeholder="https://www...." onblur="checkLink(this)">
+        </div>
+    </div>
+
+    
+     <div class="row">
+        <h4>Right Image</h4>
+         
+        <div class="row">
+            <label class="col-md-2">English Image</label>
+            <input class="col-md-6" name="pathImgRightENG" type="text" placeholder="http://lechateau.scene7.com/is/image/LeChateau/" onblur="imgChange(this)" data-height="0">
+            <input type="checkbox" value="" checked> In Scene 7 <span class="glyphicon glyphicon-eye-open"></span>
+        </div>
+         
+        <div class="row">
+            <label class="col-md-2">English SEO</label>
+            <input class="col-md-6" name="seoRightENG" type="text" name="title" placeholder="Enter ENGLISH SEO for right image">
+        </div>
+         
+        <div class="row">
+            <label class="col-md-2">French Image</label>
+            <input class="col-md-6" name="pathImgRightFR" type="text" placeholder="http://lechateau.scene7.com/is/image/LeChateau/" onblur="imgChange(this)" data-height="0">
+            <input type="checkbox" value="" checked> In Scene 7 <span class="glyphicon glyphicon-eye-open"></span>
+        </div>
+
+        <div class="row">
+            <label class="col-md-2">French SEO</label>
+            <input class="col-md-6" name="seoRightFR" type="text" name="alt" placeholder="Enter FRENCH SEO for right image">
+        </div>
+
+        <div class="row">
+            <label class="col-md-2">Link for RIGHT image</label>
+            <input class="col-md-6" name="linkImgRight" type="text" name="link" placeholder="https://www...." onblur="checkLink(this)">
+        </div>
+    </div>
+
+    
+    <div class="row left-img">    
+        <h6>Add CTA for Left image</h6>
+        <cta-form></cta-form>
+    </div>
+    
+    <div class="row right-img">
+        <h6>Add CTA for Right left</h6>
+        <cta-form></cta-form>
+    </div>
+    
+    <!--
+    <div class="row" data-lang="cta">
+        <div class='left-img'>
+            <h6>Add Title Over The Left Picture</h6>
+            English : <br><text-eng></text-eng>
+            French : <br><text-fr></text-fr>
+        </div>
+        
+        <div class='right-img'>
+            <h6>Add Title Over The Right Picture</h6>
+            English : <br><text-eng></text-eng>
+            French : <br><text-fr></text-fr>
+        </div>
+    </div>
+    -->
+
+    <div class="row options">
+        <close-form></close-form>
+    </div>
+    
+</div>

@@ -1,0 +1,93 @@
+<div class="container landingImage" data-type="single-imageMap">
+
+    <div class="row options">
+        <h7 data-toggle="tooltip" data-placement="left" title="" >Content type: Single Image with Image Map ( 1 on Left, 1 on Right)</h7>
+        <form-options></form-options>
+    </div>
+
+    
+    <div class="row">
+        <h4>Image</h4>
+        <div class="row">
+            <label class="col-md-2">ENGLISH Image</label>
+            <input class="col-md-6" name="pathImg" type="text" placeholder="http://lechateau.scene7.com/is/image/LeChateau/" onblur="imgChange(this)" data-height="0">
+            <input type="checkbox" value="" checked> In Scene 7 <span class="glyphicon glyphicon-eye-open"></span>
+        </div>
+        
+        <div class="row">
+            <label class="col-md-2">FRENCH Image</label>
+            <input class="col-md-6" name="pathImgFR" type="text" placeholder="http://lechateau.scene7.com/is/image/LeChateau/" onblur="imgChange(this)" data-height="0" required>
+            <input type="checkbox" value="" checked> In Scene 7 <span class="glyphicon glyphicon-eye-open"></span>
+        </div>
+    </div>
+    
+    
+     <div class="row" data-lang="eng">
+       <h4>Left Side (A)</h4>
+        <div class="row">
+            <label class="col-md-2">English SEO</label>
+            <input class="col-md-6" name="seoLeft" type="text" name="title" placeholder="Enter seo for the left image">
+        </div>
+
+        <div class="row">
+            <label class="col-md-2">French SEO</label>
+            <input class="col-md-6" name="seoLeftFR" type="text" placeholder="Enter seo for the left french image">
+        </div>
+        
+        <div class="row">
+            <label class="col-md-2">Link for LEFT image</label>
+            <input class="col-md-6" name="linkImgLeft" type="text" placeholder="https://www....(left)" onblur="checkLink(this)">
+        </div>
+
+    </div>
+
+
+    <div class="row" data-lang="fr">
+        <h4>Right Side (B)</h4>
+        
+        <div class="row">
+            <label class="col-md-2">ENGLISH SEO</label>
+            <input class="col-md-6" name="seoRight" type="text" name="alt" placeholder="Enter seo for the right image">
+        </div>
+
+        <div class="row">
+            <label class="col-md-2">FRENCH SEO</label>
+            <input class="col-md-6" name="seoRightFR" type="text" placeholder="Enter seo for the right french image" >
+        </div>
+
+        <div class="row">
+            <label class="col-md-2">Link for RIGHT image</label>
+            <input class="col-md-6" name="linkImgRight" type="text" placeholder="https://www....(right)" onblur="checkLink(this)">
+        </div>
+    </div>
+    
+    <div class="row left-img">    
+        <h6>Add CTA for Left side (A)</h6>
+        <cta-form></cta-form>
+    </div>
+    
+    <div class="row right-img">
+        <h6>Add CTA for Right side (B)</h6>
+        <cta-form></cta-form>
+    </div>
+    
+    <!--
+    <div class="row" data-lang="cta">
+        <div class='left-img'>
+            <h6>Add Title Over The Picture (Left Side - A)</h6>
+            English : <br><text-eng></text-eng>
+            French : <br><text-fr></text-fr>
+        </div>
+        <div class='right-img'>
+            <h6>Add Title Over The Picture (Right Side - B)</h6>
+            English : <br><text-eng></text-eng>
+            French : <br><text-fr></text-fr>
+        </div>
+    </div>
+     -->
+    
+    <div class="row options">
+       <close-form></close-form>
+    </div>
+
+</div>

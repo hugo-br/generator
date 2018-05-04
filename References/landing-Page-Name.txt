@@ -1,0 +1,12 @@
+lp-sale
+lp-outlet
+lp-shoes
+lp-home
+lp-dress
+lp-nightout
+lp-wedding
+lp-womens
+lp-men
+lp-accessories
+lp-weekend
+lp-suitshop

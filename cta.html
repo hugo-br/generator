@@ -1,0 +1,119 @@
+<style>
+#demo{
+    background-position: center;
+    background-size: 100% 100%;
+}
+
+
+
+
+ </style>
+
+
+ 
+<div class="container" id="cta-lp">
+
+  <div class="row">
+        <h3>CTA</h3>
+   </div>
+    
+  <br>
+  <div class="row">
+     <label class="col-md-2">Image Path :</label>
+     <input class="col-md-6" name="pathImg" type="text" placeholder="https://lechateau.scene7.com/is/image/LeChateau/" onblur="getDimCanvas(this)" data-height="0">
+     <input type="checkbox" value="" checked=""> In Scene 7 <span class="glyphicon glyphicon-eye-open"></span>
+   </div>
+
+<canvas id="demo"></canvas>
+
+<script>
+
+function getDimCanvas(that) {
+    //    getDimCanvas(that).promise().done(function(result) { 
+           imgChange(that);
+        //   var h = $(that).attr("data-height");
+        //   console.log(h);
+           document.getElementById('demo').height="1000";
+           document.getElementById('demo').width="1000";
+           img.onload = start;
+           img.src = 'https://lechateau.scene7.com/is/image/LeChateau/womens_skirts-170224_en-4d?$jpeg-full$&qlt=94';
+           ctx.strokeStyle = 'red';
+   //     });
+}
+    
+    
+
+var canvas = document.getElementById('demo'),
+    ctx = canvas.getContext('2d'),
+    line = new Line(ctx),
+    lineH = new Line(ctx),
+    img = new Image;
+
+ctx.strokeStyle = 'red';
+
+
+function Line(ctx) {
+    
+    var me = this;
+    
+    this.x1 = 0;
+    this.x2 = 0;
+    this.y1 = 0;
+    this.y2 = 0;
+    
+    this.draw = function() {
+        ctx.beginPath();
+        ctx.moveTo(me.x1, me.y1);
+        ctx.lineTo(me.x2, me.y2);
+        ctx.stroke();
+    }
+}
+
+
+
+
+function start() {
+    ctx.drawImage(img, 0, 0, demo.width, demo.height);
+    canvas.onmousemove = updateLine;
+	canvas.addEventListener('click', removeHandler, false);
+}
+
+
+function updateLine(e) {
+    var r = canvas.getBoundingClientRect(),
+        x = e.clientX - r.left,
+        y = e.clientY - r.top;
+    
+   ctx.drawImage(img, 0, 0, canvas.width, canvas.height);
+	
+	// Vertical
+    line.x1 = x;
+    line.y1 = 0;
+    line.x2 = x;
+    line.y2 = canvas.height;
+    line.draw();
+	
+	// Horizontal
+    lineH.x1 = 0;
+    lineH.y1 = y;
+    lineH.x2 = canvas.width;
+    lineH.y2 = y;
+    lineH.draw(); 
+}
+
+function removeHandler() {
+
+	if(canvas.onmousemove == null){
+		canvas.onmousemove = updateLine;
+	} else {
+		canvas.onmousemove = "";
+		var x = line.x1;
+		var y = lineH.y1 + 20;
+		//canvas.width / 2
+		ctx.fillText("My TEXT!", x, y);
+	}
+}
+
+</script>
+
+</div>

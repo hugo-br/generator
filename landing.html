@@ -1,0 +1,115 @@
+<div class="container" ng-controller="LPCtrl">
+    
+    <div class="row">
+        <h3>Landing Page</h3>
+        <h7>Create your own Landing Page</h7>
+    </div>
+
+    <div class="row">
+        <div class="col-md-6">
+            <p>Select your content block template</p>
+            
+            <!-- <select ng-model="typeValue" ng-options="type.Name for (id, type) in typeObject" class="form-control" style="max-width:80%;display:inline-block;"></select>
+            <br><br> -->
+            
+            <select ng-model="pageValue" id="pageValue" ng-options="page.name for page in pages" class="form-control" style="max-width:80%;display:inline-block;" ng-change="changeType();">
+            </select>
+            <br><br>
+            
+            <select ng-model="typeValue" ng-show="pageValue" ng-options="type.Name for (id, type) in pageValue.typeBlock" class="form-control" style="max-width:80%;display:inline-block;">
+            </select>
+  
+            <button ng-click="addImage()" ng-if="typeValue" type="button" class="btn btn-primary">Add</button>
+            
+        </div>
+
+        <div class="col-md-3 col-md-offset-3">
+            <button onclick="generateLP();" id="get-code" type="button" class="btn btn-success btn-sm">Get Code</button>
+          <!--  <button ng-click="resetLP();" class="btn btn-danger btn-sm">Reset</button> -->
+            <button data-toggle="modal" data-target="#confirm-delete" class="btn btn-danger btn-sm">Reset</button>
+        </div>
+
+    </div>
+
+    <!-- container for all forms -->
+    <div id="landingGenerator" class="form-group"></div>
+
+
+
+
+    <!-- Modal for code result, result go there -->
+    <div class="modal fade" id="LPModal" role="dialog">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <!-- Header -->
+                <div class="modal-header">
+                    <h4 class="modal-title">Code</h4>
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                </div>
+                <!-- Body -->
+                <div class="modal-body">
+                    <!-- Details boxes -->
+                    <div class="alert alert-info row">
+                        <strong>Warning.</strong> Always verify the code.
+                        <div id="error-modal"></div>
+                    </div>
+                    
+                    <div class="row">
+                        <ul class="nav nav-pills">
+                            <li ng-class="{ active: isSet(1) }"><a href ng-click="setTab(1)">Code Results</a></li>
+                            <li ng-class="{ active: isSet(2) }"><a href ng-click="setTab(2)">Preview English</a></li>
+                            <li ng-class="{ active: isSet(3) }"><a href ng-click="setTab(3)">Preview French</a></li>
+                        </ul>
+                    </div>                          
+                    
+                  <div class="tab-content">  
+                      
+                    <!-- Result will go there -->
+                    <div id="LPcode" ng-show="isSet(1)">
+                        <div class="prod form-group">
+                            <h7>English</h7>
+                            <button onclick="selectResult(this)" data-lang='english' class="btn btn-info btn-xs glyphicon glyphicon-circle-arrow-down"></button>
+                            <br>
+                            <textarea class="english form-control" rows="10"></textarea>
+                            <br><br>
+                            <h7>French</h7><button onclick="selectResult(this)" data-lang='french' class="btn btn-info btn-xs glyphicon glyphicon-circle-arrow-down"></button><br>
+                            <textarea class="french form-control" rows="10"></textarea>
+                        </div>
+                    </div>
+                      
+                    <div class="preview-result-lp" ng-show="isSet(2)">
+                        <iframe id="result-preview-eng" srcdoc=""></iframe>
+                    </div>  
+                  
+                    <div class="preview-result-lp" ng-show="isSet(3)">
+                        <iframe id="result-preview-fr" srcdoc=""></iframe>
+                    </div>
+                    
+                  </div> <!-- End tab-content --> 
+                    
+                </div> <!-- End Modal body --> 
+            </div>
+        </div>
+    </div>
+    
+    <!-- Reset Confirmation -->
+    <div class="modal fade" id="confirm-delete" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+               <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                    <h4>Confirm Delete</h4>
+                </div>
+                <div class="modal-body">
+                    <p>You are about to delete all the content block</p>
+                    <p>Do you want to proceed?</p>
+                </div>
+                 <div class="modal-footer">
+                    <button type="button" class="btn" data-dismiss="modal">Cancel</button>
+                    <button class="btn btn-danger btn-sm" ng-click="resetLP()" data-dismiss="modal">Delete</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>

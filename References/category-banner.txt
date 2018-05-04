@@ -1,0 +1,16 @@
+
+
+<!-- With CTA and Text -->
+<link rel="stylesheet" type="text/css" href="http://www.lechateau.com/style/html/landing/assets/css/lc-category-banners.css" />
+<div class="wrapper">
+<div style="position:absolute; z-index:2;"><a href="http://www.lechateau.com/style/jump/Laser+Cut+Scuba+Knit+Cocktail+Dress/productDetail/Clothing/350486/cat37630709">   <!-- Change Image here --> <img src="http://lechateau.scene7.com/is/image/LeChateau/Women_dress-161210_en?$jpeg-full$&amp;qlt=94" alt="Shop Occasion Dresses" />  </a></div>
+<div class="cb-float-left cb-table-half" style="height:400px; margin-left:380px;">
+<div class="cb-table-column">
+<div class="cb-text-holder" style="width:75%;">
+<div class="cb-text"><!-- Change Text here -->
+<!--<h1 class="banner-title text-black">OCCASION<br />DRESSES</h1> --> 
+<a target="_top" class="button button-margin regular" title="Shop Occasion Dresses" href="http://www.lechateau.com/style/jump/Laser+Cut+Scuba+Knit+Cocktail+Dress/productDetail/Clothing/350486/cat37630709">SHOP THIS STYLE</a></div>
+</div>
+</div>
+</div>
+</div>

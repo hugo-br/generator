@@ -1,0 +1,80 @@
+<!doctype html>
+<html><head>
+    <meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta content="True" name="HandheldFriendly">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+	<link rel="stylesheet" type="text/css" href="https://www.lechateau.com/style/html/landing/assets/css/main.css">
+    <link rel="stylesheet" type="text/css" href="https://www.lechateau.com/style/html/assets/fonts/MyFontsWebfontsKit.css">
+    
+    <!-- COPY ONLY THIS CSS FOR BCC -->
+    <link rel="stylesheet" type="text/css" href="https://www.lechateau.com/style/html/landing/assets/css/lc-category-banners-V3.css">
+    
+    <style type="text/css">
+	  
+	  .cat-container-FB {
+	    width:100%; 
+		display:block;
+	  }
+	  .backgroundpos-cat {
+	    width: 100%; 
+		background-repeat:no-repeat;
+		background-position:50% 50%; 
+		position:absolute; 
+		z-index:2;
+	  }
+	  .ctas {
+	    width:100%; 
+		margin-left:auto;
+		margin-right:auto;
+		text-align:center; 
+		position: absolute; 
+		left:0px; 
+		top:0px;
+	  }
+	  .ctas .btn-lc {
+	    position:relative;
+		z-index: 3;
+	  }
+	  
+    .wrapper { padding: 0px !important; margin-bottom: 0px !important;}
+     @media (min-width:592px){
+        .FS-SHOW-DESKTOP{display:block;}
+        .FS-SHOW-MOBILE{display:none;}
+       }
+     @media (max-width:591px){
+        .FS-SHOW-DESKTOP{display:none;}
+        .FS-SHOW-MOBILE{display:block;}
+     }
+      img[usemap] {
+            border: none;
+            height: auto;
+            max-width: 100%;
+            width: auto;
+        }
+       @media (max-width: 767px) {.categoryBanner, #catBanner { display: inline !important; } }
+    </style>
+  </head>
+
+<body>
+
+    <div style="max-width:1025px;">
+        
+            {{Desktop}}
+        
+    </div>
+
+<!-- Terms pop-up -->   
+ <script language="javascript" type="text/javascript">
+    var win=null;
+    function NewWindow(mypage,myname,w,h,scroll,pos){
+    if(pos=="random"){LeftPosition=(screen.width)?Math.floor(Math.random()*(screen.width-w)):100;TopPosition=(screen.height)?Math.floor(Math.random()*((screen.height-h)-75)):100;}
+    if(pos=="center"){LeftPosition=(screen.width)?(screen.width-w)/2:100;TopPosition=(screen.height)?(screen.height-h)/2:100;}
+    else if((pos!="center" && pos!="random") || pos==null){LeftPosition=0;TopPosition=20}
+    settings='width='+w+',height='+h+',top='+TopPosition+',left='+LeftPosition+',scrollbars='+scroll+',location=no,directories=no,status=no,menubar=no,toolbar=no,resizable=no';
+    win=window.open(mypage,myname,settings);}
+ </script>
+    
+</body>
+    
+</html>

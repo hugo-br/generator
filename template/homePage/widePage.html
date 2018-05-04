@@ -1,0 +1,182 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta content="True" name="HandheldFriendly" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+    
+	<link rel="stylesheet" type="text/css" href="https://www.lechateau.com/style/html/landing/assets/css/main.css">
+    <link rel="stylesheet" type="text/css" href="https://www.lechateau.com/style/html/assets/fonts/MyFontsWebfontsKit.css">
+    
+   
+    <!-- COPY ONLY THIS CSS FOR BCC -->
+    <link rel="stylesheet" type="text/css" href="https://www.lechateau.com/style/html/landing/assets/css/lc-landing-pages-V5.css"> 
+
+   <style type="text/css">
+   
+  		.listing .wrapper:not(.top) {
+			padding: 0px;
+		}
+
+		#content.help .wrapper {
+			padding-top: 0px;
+		}
+
+	    /* Break points */
+        
+        @media (max-width: 2000px) and (min-width: 769px) {
+            .FS-SHOW-TABLET {
+                display: none;
+            }
+        }
+        @media (min-width: 769px) {
+            .FS-SHOW-DESKTOP {
+                display: block;
+            }
+            .FS-SHOW-TABLET {
+                display: none;
+            }
+            .FS-SHOW-MOBILE {
+                display: none;
+            }
+				.tablet-video{display:none;}
+        }
+        @media (max-width: 768px) {
+            .FS-SHOW-DESKTOP {
+                display: none;
+            }
+            .FS-SHOW-TABLET {
+                display: block;
+            }
+            .FS-SHOW-MOBILE {
+                display: none;
+            }
+        }
+        @media (max-width: 591px) {
+            .FS-SHOW-DESKTOP {
+                display: none;
+            }
+            .FS-SHOW-TABLET {
+                display: none;
+            }
+            .FS-SHOW-MOBILE {
+                display: block;
+            }
+				.tablet-video{display:none;}
+        }
+		
+        /* END Break points */
+        
+        .wrapper,
+        header.global .top,
+        header.global .bottom,
+        footer.global .copyright,
+        #content.landing .top,
+        #content.listing .top {
+            padding: 0 0px !important;
+        }
+        #content {
+            padding-bottom: 10px !important;
+            padding-left: 0px !important;
+            padding-right: 0px !important;
+            margin-bottom: 0px !important;
+        }
+        .wrapper {
+            padding: 0 0px;
+        }
+        .backgroundpos-001 {
+            background-position-x: 50% !important;
+            background-position: 50% !important;
+            background-repeat: no-repeat;
+        }
+        .backgroundpos-outlet {
+            background-position-x: 50% !important;
+            background-position: 50% !important;
+            background-repeat: no-repeat;
+        }
+        .lp-bkg.half {
+            width: 49%;
+            background-position: 50%;
+            background-position-x: 50%;
+        }
+		.insta-holder-001 {
+            margin-right: 0.6%;
+        }
+        .insta-holder-002 {} @media (min-width: 1025px) {
+            .FS-SHOW-INSTA-DESKTOP {
+                display: block;
+            }
+        }
+        @media (max-width: 1024px) {
+            .FS-SHOW-INSTA-DESKTOP {
+                display: none;
+            }
+        }
+		.FS-SHOW-DESKTOP > div > div:nth-child(1){
+			margin-top: 0px !important;
+		}
+	
+
+		@font-face {
+			font-family: 'GothamMedium';
+			src: url("font/Gotham-Medium.otf") format("opentype");
+
+		}
+
+   </style>     
+   
+</head>
+<body>
+
+    
+    <br/><br/><div style="width:100%; background-color:rgba(147,147,147,1.00); text-align:center; font-size:30px;"><strong>DESKTOP</strong></div><br/><br/> -->
+
+    
+    <div>
+
+      <div class="FS-SHOW-DESKTOP">
+
+        <!-- Start DESKTOP -->
+        <div style="max-width:2000px; margin-left:auto; margin-right:auto;"> 
+           {{Desktop}}
+         </div>  
+       </div>
+       <!-- END DESKTOP -->
+            
+        <br/><br/><div style="width:100%; background-color:rgba(147,147,147,1.00); text-align:center; font-size:30px;"><strong>TABLET</strong></div><br/><br/>-->
+            
+        <div class="FS-SHOW-TABLE">
+          <!-- Start TABLET -->
+          <div style="max-width:768px;">
+            {{Tablet}}
+          </div>
+        </div>
+        <!-- End TABLET -->
+            
+            
+        <br/><br/><div style="width:100%; background-color:rgba(147,147,147,1.00); text-align:center; font-size:30px;"><strong>MOBILE DEVICES</strong></div><br/><br/>-->
+        
+        <div class="FS-SHOW-MOBIL">
+        <!-- Start MOBILE -->
+          <div style="max-width:591px;">       
+            {{Mobile}}        
+          </div>
+        </div> 
+        <!-- End MOBILE -->
+            
+    </div>
+    
+    <script type="text/javascript" src="https://www.lechateau.com/style/html/assets/iframe/src/iframeResizer.contentWindow.js" defer></script>
+    <script src="https://www.lechateau.com/style/html/landing/assets/js/jquery.rwdImageMaps.min.js"></script>
+    
+    <script>
+      $(document).ready(function(e) {
+         $('img[usemap]').rwdImageMaps();
+       });
+    </script>
+
+    
+</body>
+</html>
