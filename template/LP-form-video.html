@@ -1,0 +1,37 @@
+<!--  This is the template for the form of the Landing Page  -->
+<!-- Use the angular controller ( LPCtrl ) for the functions -->
+
+<div class="container landingImage" data-type="video">
+
+    <div class="row options"> 
+        <h7 data-toggle="tooltip" data-placement="left" title="" >Content type: Vimeo Video</h7>
+        <form-options></form-options>
+    </div>
+
+    <div class="row" data-lang="eng">
+        <h4>Vimeo ID - English</h4>
+        <div class="row">
+            <input class="col-md-12 form-control" type="text" name="vimeoENG"></input>
+        </div>
+    </div>
+
+
+    <div class="row" data-lang="fr">
+        <h4>Vimeo ID - French</h4>
+        <div class="row">
+            <input class="col-md-12 form-control" rows="text" name="vimeoFR"></input>
+        </div>
+    </div>
+	
+    <div class="row" data-lang="fr">
+        <h4>Video Desktop Width (in pixels, number only)</h4>
+        <div class="row">
+            <input class="col-md-12 form-control" type="number" name="widthVideo" placeholder="100%"></input>
+        </div>
+    </div>	
+    
+   <div class="row options">
+     <close-form></close-form>
+    </div>
+
+</div>

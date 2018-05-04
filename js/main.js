@@ -1,3 +1,11 @@
+/*////////////////////////////////
+  Adding a new template :
+  
+    1. Must create a form (copy the custom-html)
+	2. Rename it (LP-form-<TYPE>.html)
+
+////////////////////////////////////*/
+
 // MAIN APP
 var app = angular.module("myApp", ["ngRoute"]);
 
@@ -27,7 +35,7 @@ app.controller('LPCtrl', ['$scope', '$compile', '$timeout', function ($scope, $c
 
     // Enter the type of block we can render
     // Value should be the same has the data-type attribute of the container(template html file)
-    
+    // For forms
     
    $scope.pages = {
    
@@ -46,20 +54,22 @@ app.controller('LPCtrl', ['$scope', '$compile', '$timeout', function ($scope, $c
                 , value: "single-imageMap"
                 , template: "template/LP-form-imageMap.html"
             }
-            , "4": {
+            , "3": {
                 Name: "2 Images side by side"
                 , value: "multiple"
                 , template:"template/LP-form-double.html"
             }
-            , "3": {
+           , "4": {
+                  Name: "Video Vimeo"
+                , value: "video"
+				, template: "template/LP-form-video.html"
+            }			
+            , "5": {
                 Name: "Custom HTML"
                 , value: "custom-html"
                 , template: "template/LP-form-html.html"
             }
-            , "5": {
-                Name: "Video"
-                , value: "video"
-            }
+ 
             
         }
      },
@@ -89,33 +99,91 @@ app.controller('LPCtrl', ['$scope', '$compile', '$timeout', function ($scope, $c
                 , value: "custom-html"
                 , template: "template/LP-form-html.html"
             }
-            , "5": {
-                Name: "Video"
+            , "4": {
+                  Name: "Video Vimeo"
                 , value: "video"
+				, template: "template/LP-form-video.html"
+            }
+            
+            
+        }
+     },	 
+	 
+	 
+    // HomePage
+      "2" : {
+        "name": "HomePage (2000px)",
+        "template": "template/homePage/homePage.html",   
+        "typeBlock": { 
+            
+            "1": {
+                Name: "Single Image"
+                , value: "single-home"
+                , template: "template/LP-form.html"
+            }
+            , "2": {
+                Name: "Single image with image map (50%-50%)"
+                , value: "single-imageMap"
+                , template: "template/LP-form-imageMap.html"
+            }
+            , "4": {
+                Name: "2 Images side by side"
+                , value: "multiple"
+                , template:"template/LP-form-double.html"
+            }
+            , "3": {
+                Name: "Custom HTML"
+                , value: "custom-html"
+                , template: "template/LP-form-html.html"
+            }
+            , "5": {
+                  Name: "Video Vimeo"
+                , value: "video"
+				, template: "template/LP-form-video.html"
+            }
+            
+        }
+     },
+	 
+	 
+	 // Landing Page (2000px)
+      "1" : {
+        "name": "Landing Page - (2000px)",
+        "template": "template/homePage/widePage.html",   
+        "typeBlock": { 
+            
+            "1": {
+                  Name: "Single Image"
+                , value: "single-home"
+                , template: "template/LP-form.html"
+            }
+            , "2": {
+                  Name: "Single image with image map (50%-50%)"
+                , value: "single-imageMap"
+                , template: "template/LP-form-imageMap.html"
+            }
+            , "4": {
+                  Name: "2 Images side by side"
+                , value: "multiple"
+                , template:"template/LP-form-double.html"
+            }
+            , "3": {
+                  Name: "Custom HTML"
+                , value: "custom-html"
+                , template: "template/LP-form-html.html"
+            }
+            , "5": {
+                  Name: "Video Vimeo"
+                , value: "video"
+				, template: "template/LP-form-video.html"
             }
             
         }
      },	 
 	 
 	 
-	 
- /*   "5" : {
-           "name": "Sale - Outlet Page",
-           "template": "template/salePage/sale.html",
-           "typeBlock": { 
-                "1": {
-                    Name: "Items Row"
-                    , value: "items"
-                    , template:"template/salePage/sale-form-items.html"
-                }
-               , "4": {
-                Name: "Custom HTML"
-                , value: "custom-html"
-                , template: "template/LP-form-html.html"
-            }
-          }  
-       }, */
-      
+
+	 // BANNERS TEMPLATE
        "5" : {
            "name": "Category Banners Page",
            "template": "template/category/category.html",
@@ -152,72 +220,27 @@ app.controller('LPCtrl', ['$scope', '$compile', '$timeout', function ($scope, $c
                 }
           }  
        },
-       
-      "2" : {
-        "name": "Home Page (2000px)",
-        "template": "template/homePage/homePage.html",   
-        "typeBlock": { 
-            
-            "1": {
-                Name: "Single Image"
-                , value: "single-home"
-                , template: "template/LP-form.html"
-            }
-            , "2": {
-                Name: "Single image with image map (50%-50%)"
-                , value: "single-imageMap"
-                , template: "template/LP-form-imageMap.html"
-            }
-            , "4": {
-                Name: "2 Images side by side"
-                , value: "multiple"
-                , template:"template/LP-form-double.html"
-            }
-            , "3": {
+	   
+	 	 
+ /*   "5" : {
+           "name": "Sale - Outlet Page",
+           "template": "template/salePage/sale.html",
+           "typeBlock": { 
+                "1": {
+                    Name: "Items Row"
+                    , value: "items"
+                    , template:"template/salePage/sale-form-items.html"
+                }
+               , "4": {
                 Name: "Custom HTML"
                 , value: "custom-html"
                 , template: "template/LP-form-html.html"
             }
-            , "5": {
-                Name: "Video"
-                , value: "video"
-            }
-            
-        }
-     },
-	 
-      "1" : {
-        "name": "Landing Page - (2000px)",
-        "template": "template/homePage/widePage.html",   
-        "typeBlock": { 
-            
-            "1": {
-                Name: "Single Image"
-                , value: "single-home"
-                , template: "template/LP-form.html"
-            }
-            , "2": {
-                Name: "Single image with image map (50%-50%)"
-                , value: "single-imageMap"
-                , template: "template/LP-form-imageMap.html"
-            }
-            , "4": {
-                Name: "2 Images side by side"
-                , value: "multiple"
-                , template:"template/LP-form-double.html"
-            }
-            , "3": {
-                Name: "Custom HTML"
-                , value: "custom-html"
-                , template: "template/LP-form-html.html"
-            }
-            , "5": {
-                Name: "Video"
-                , value: "video"
-            }
-            
-        }
-     },	 
+          }  
+       }, */
+	   
+	   
+	   
     
 };
     
@@ -534,6 +557,7 @@ app.directive('ctaLink', function () {
     , }
 });
 
+// CTA selection template
 app.directive('ctaOpt', function () {
     return {
         template: "Position :<br> <select class='form-control col-xs-3'><option ng-repeat='x in posCta' data-left='{{x.left}}' data-top='{{x.top}}'>{{x.Name}}</option></select><br>\
@@ -556,7 +580,7 @@ app.directive('closeForm', function () {
     , }
 });
 
-
+// On image change
 function imgChange(elem, callbck) {
 
     var scene = "https://lechateau.scene7.com/is/image/LeChateau/";
@@ -601,6 +625,7 @@ function ctaTemplate(name, link, css, posLeft, posTop, seo) {
     return "<a class='" + css + "' style='position:relative; left:" + posLeft +"px; top:" + posTop + "px; z-index: 2;' href='" + link + "' target='_top' title='" + seo + "'>" + name.toUpperCase() + "</a>\n";
 }
 
+
 // change the name of picture for tablet or mobile
 function changeImgto(img, patt, letter){
          var arr = img.split(patt);
@@ -610,6 +635,7 @@ function changeImgto(img, patt, letter){
          res = arr[0] + n + '&qlt=94&ver=1.0';
          return res;
 }
+
 
 // function to convert gif name for tablet or mobile 
 function changeGif(img, letter){
@@ -626,6 +652,7 @@ function changeGif(img, letter){
 	     return img;
 	}
 }
+
 
 // Transform Desktop image into Mobile and Tablet
 function getMobileImages(img, type) {
@@ -693,6 +720,9 @@ var FR = {
 };
 
 var ERROR = "";
+
+
+
 
 ////////////////////////////////////
 /////////   THE LOGIC    ///////////
@@ -1111,6 +1141,7 @@ function customHTML($that, type, e) {
     
 }
 
+
 // LOGIC FOR TWO IMAGES SIDE BY SIDE
 function twoImages($that, type, e) {
     
@@ -1315,6 +1346,85 @@ function twoImages($that, type, e) {
             });
 }
 
+
+// LOGIC FOR VIDEO BLOCK
+function video($that, type, e, tmp) {
+    
+//	$that  == the templating form you're in
+
+    var tpt = 'template/landingPage/video.html'; // Desktop html template
+    var tabTpt = 'template/landingPage/video-mob.html'; // Tablette html template		
+    var ind = e + 1;
+	
+	
+	// values 
+	var videoENG = $that.find("input[name='vimeoENG']").val();
+	var videoFR = $that.find("input[name='vimeoFR']").val();
+	var vidWdith = $that.find("input[name='widthVideo']").val() + "px";
+	if (tmp.indexOf('landingPage.html') == -1){
+		var blockWidth = '2000px';
+	} else {
+		var blockWidth = '815px';
+	}
+    
+	console.log(vidWdith);
+	if(!vidWdith || vidWdith == 'px') { vidWdith = '100%';}
+	var commands = ['Play', 'Jouez', 'Stop', 'Arrêtez', 'Sound', 'Son', 'Mute', 'Muet'];
+            
+           // Desktop
+             $.get(tpt, function (template) {
+                var deskEn = Mustache.to_html(template, {
+                      i: ind 
+                    , video: videoENG,
+					  width: vidWdith,
+					  play: commands[0],
+					  stop: commands[2],
+					  sound: commands[4],
+					  mute: commands[6],
+					  blockWidth: blockWidth
+                });
+                
+                var deskFr = Mustache.to_html(template, {
+                      i: ind 
+                    , video: videoFR,
+					  width: vidWdith,
+					  play: commands[1],
+					  stop: commands[3],
+					  sound: commands[5],
+					  mute: commands[7],
+					  blockWidth: blockWidth
+                });
+                
+                tempENG.d[ind] = deskEn;
+                tempFR.d[ind] = deskFr;
+            });
+                
+            
+            // Tablet
+            $.get(tabTpt, function (template) {
+                
+				var tabEn = Mustache.to_html(template, {
+                      i: ind 
+                    , video: videoENG
+                });
+                var tabFr = Mustache.to_html(template, {
+                      i: ind 
+                    , video: videoFR
+                });
+
+            
+            // tablet			
+                tempENG.t[ind] = tabEn;
+                tempFR.t[ind] = tabFr;
+			
+			// mobile
+                tempENG.m[ind] = tabEn;
+                tempFR.m[ind] = tabFr;               
+            });
+    
+}
+
+
 // LOGIC FOR CATEGORY BLOCK
 function category($that, type, e) {
     var ind = e + 1;
@@ -1447,6 +1557,7 @@ function itemsSale($that, type, e) {
     });
 }
 
+
 // transform for homepage
 function toHomepage(t, lang) {
     var txt = document.createElement("textarea");
@@ -1503,7 +1614,7 @@ function generateLP() {
     // Template is the path on the template scope.pages
     var tmp = $("#pageValue").data("template") || 'template/landingPage/landingPage.html'; // set the right template to use
 	var pageLenght = Number($(".landingImage").length) + 1;
-	
+	var isThereAVideo = false; // if video variable
 	
     // LOOP to pick all values of the inputs
     $(".landingImage").each(function (e) {
@@ -1512,6 +1623,8 @@ function generateLP() {
        var type = $(this).data("type"); 
        var $that = $(this);
 
+	   
+	   // what it does : select the function for each block template
         switch (type) {
             
             // Regular Landing Page logic       
@@ -1530,6 +1643,11 @@ function generateLP() {
             case 'custom-html':
                 customHTML($that, type, e);
             break;
+			
+            case 'video':
+                video($that, type, e, tmp);
+				isThereAVideo = true;
+            break;			
             
             // Category Baners logic      
             case 'simpleImage':
@@ -1540,9 +1658,9 @@ function generateLP() {
                 category($that, type, e);
             break;
                 
-            case 'outletPromo':
-                alert("hi");
-            break; 
+      //      case 'outletPromo':
+      //          alert("hi");
+      //      break; 
             
             // Sale Page logic    
             case 'itemsSale':
@@ -1597,12 +1715,14 @@ function generateLP() {
                 , Tablet: ENG.tablet
                 , Mobile: ENG.mobile
 				, english: true
+				, video: isThereAVideo
             });
             var resFR = Mustache.render(template, {
                 Desktop: FR.desktop
                 , Tablet: FR.tablet
                 , Mobile: FR.mobile
 				, french: true
+				, video: isThereAVideo
             });
             
             $("#LPcode .english").text(res);

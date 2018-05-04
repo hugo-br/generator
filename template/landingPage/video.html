@@ -1,0 +1,51 @@
+
+           <!-- ROW #{{ i }} START - VIDEO  --> 		   
+            <div class="wrapper" style="max-width:{{blockWidth}}; margin-bottom:0px; position:relative;">
+              <div class="cb-table-full " style=" width:100%; max-width:100%;">
+                <div class="cb-table-column ">
+                  <div class="cb-text-holder " style="width:inherit !important;">
+                    <div class="cb-text " style="padding:0px !important;">
+                      
+					 <!-- Desktop video -->
+					  <div class="wrapper desktop-only video" style="margin-bottom:0px; width:{{width}};">
+                        <div class="embed-container"> 
+						  <!-- Video link -->
+						  <iframe id="desktop-video" src="https://player.vimeo.com/video/{{video}}?loop=1&amp;autoplay=1&amp;mute=1&amp;background=1" frameborder="0" webkitallowfullscreen="" mozallowfullscreen="" allowfullscreen="" data-ready="true"></iframe>
+						</div>
+                        <div class="controls-wrap">
+                          <div class="video-controls"> 
+            			    <button onclick="pauseVideo(this);" class="btn-controls pause"> <!-- Play button -->
+            			      <img src="https://lechateau.scene7.com/is/image/LeChateau/icons-pause-v2?$png-full$&amp;qlt=94" alt="{{play}}"> 
+            			    </button> 
+            			    <button onclick="playVideo(this);" class="btn-controls play hidden"> <!-- Pause button -->
+            			      <img src="https://lechateau.scene7.com/is/image/LeChateau/icons-play-v2?$png-full$&amp;qlt=94" alt="{{stop}}"> 
+            			    </button>
+            			  </div>
+                          <div class="sound-bar">
+                            <div> 
+							<button onclick="addSound(this);" class="btn-controls sound-play">  <!-- Sound ON button -->
+            				  <img src="https://lechateau.scene7.com/is/image/LeChateau/icons-mute-v2?$png-full$&amp;qlt=94" alt="{{sound}}"> 
+            				</button> 
+            				<button onclick="muteSound(this);" class="btn-controls sound-pause hidden"> <!-- Sound OFF button -->
+            				  <img src="https://lechateau.scene7.com/is/image/LeChateau/icons-volume-v2?$png-full$&amp;qlt=94" alt="{{mute}}"> 
+            				</button>
+            				</div>
+                          </div>
+                        </div>
+                      </div>
+					  
+					  <!-- Wide tablet video -->
+                      <div class="wrapper tablet-video" style="max-width:1025px;margin-bottom:0px;">
+                        <div class="embed-container"> 
+						  <!-- Video link -->
+            			  <iframe id="tabVideo" allowfullscreen="" frameborder="0" src="https://player.vimeo.com/video/{{video}}?color=ffffff"></iframe>
+            			</div>
+                      </div>
+					  					  
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+           <!-- ROW #{{ i }} END - VIDEO  --> 
+		   

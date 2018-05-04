@@ -110,8 +110,151 @@
 		@font-face {
 			font-family: 'GothamMedium';
 			src: url("font/Gotham-Medium.otf") format("opentype");
-
 		}
+		
+   {{#video}}
+    /*---------------
+        VIDEO CSS
+    ----------------- */
+
+		.controls-wrap {
+			position: absolute;
+			width: 50%;
+			left: 25%;
+			top: 10%;
+			height: 80%;
+		}
+
+		.controls-wrap:hover .video-controls,
+		.controls-wrap:hover .sound-bar div {
+			display: block;
+			opacity: 1;
+		}
+
+		.video-controls {
+			position: absolute;
+			margin: -6em 0 0 -3.25em;
+			position: absolute;
+			top: 52%;
+			left: 48%;
+			z-index: 1;
+			display: none;
+			opacity: 0;
+			transition: all 75ms;
+			top: calc((100% + 50px) / 2);
+			left: calc((100%) / 2);
+		}
+
+		.video-controls.hidden {
+			display: none;
+			opacity: 0;
+		}
+
+		.btn-controls.hidden {
+			display: none;
+			opacity: 0;
+		}
+
+		.btn-controls {
+			/*Reset's every elements apperance*/
+			background: none repeat scroll 0 0 transparent;
+			border: medium none;
+			border-spacing: 0;
+			color: #26589F;
+			font-family: 'PT Sans Narrow', sans-serif;
+			font-size: 16px;
+			font-weight: normal;
+			line-height: 1.42rem;
+			list-style: none outside none;
+			margin: 0;
+			padding: 0;
+			text-align: left;
+			text-decoration: none;
+			text-indent: 0;
+			opacity: 0.8;
+			min-width: 0;
+			transition: opacity 250ms ease-out, background-color 40ms, color 40ms;
+		}
+
+		button.btn-controls:after {
+			content: none;
+		}
+
+
+		.btn-controls:hover {
+			opacity: 1;
+		}
+
+		.sound-bar {
+			position: absolute;
+			top: 89%;
+			left: 46%;
+			width: 100%;
+			height: 20%;
+			text-align: right;
+		}
+
+		.sound-bar>div {
+			display: none;
+			opacity: 0;
+			transition: opacity 250ms ease-out;
+		}
+
+		/* Play/Stop Buttons */
+
+		.video-controls .btn-controls {
+			width: 150px;
+			height: 150px;
+			border: none;
+		}
+
+		/* Sound Buttons */
+
+		.sound-bar .btn-controls {
+			top: 50%;
+			position: absolute;
+			left: 92%;
+			border: none;
+		}
+
+		.sound-bar:hover div {
+			display: block;
+			opacity: 1;
+		}
+
+		.sound-bar .btn-controls {
+			width: 65px;
+			height: 65px;
+			min-width: 0px;
+		}
+
+		.embed-container {
+			position: relative;
+			padding-bottom: 56.25%;
+			height: 0;
+			overflow: hidden;
+			max-width: 100%;
+		}
+
+
+		/* full-width video */
+		.embed-container iframe {
+			position: absolute;
+			z-index: 0;
+			width: 100%;
+			height: 100%;
+		}
+		
+        @media (min-width: 769px) {
+			.tablet-video{display:none;}
+        }
+		
+        @media (max-width: 591px) {
+			.tablet-video{display:none;}
+	    }
+
+
+   {{/video}}
 		
     </style>
 
@@ -166,6 +309,67 @@
        });
     </script>
     
-    
+  {{#video}}
+ <!-- VIDEO SCRIPT -->
+   <script src="https://player.vimeo.com/api/player.js"></script>
+
+	<script type="text/javascript">
+		if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
+			if (document.documentElement.clientWidth > 769) {
+				$(".desktop-only").css({
+					"display": "none"
+				});
+				$("#desktop-video").css({
+					"display": "none"
+				});
+				$(".tablet-video").css({
+					"display": "block"
+				});
+			} else if (document.documentElement.clientWidth < 769) {
+				$(".tablet-video").css({
+					"display": "none"
+				});
+			}
+		}
+
+		// Desktop    
+		var frame = document.querySelector('#desktop-video');
+		var player = new Vimeo.Player(frame);
+		player.setVolume(0); // mute the video
+
+
+		function pauseVideo(that) {
+			player.pause();
+			$(".btn-controls.pause").addClass("hidden");
+			$(".btn-controls.play").removeClass("hidden");
+
+		}
+
+		function playVideo(that) {
+			player.play();
+			$(".btn-controls.play").addClass("hidden");
+			$(".btn-controls.pause").removeClass("hidden");
+		}
+
+		function muteSound(that) {
+			player.setVolume(0);
+			$(".btn-controls.sound-pause").addClass("hidden");
+			$(".btn-controls.sound-play").removeClass("hidden");
+		}
+
+		function addSound(that) {
+			player.setVolume(1);
+			$(".btn-controls.sound-play").addClass("hidden");
+			$(".btn-controls.sound-pause").removeClass("hidden");
+		}
+
+		player.on('ended', function(data) {
+			$(".btn-controls.pause").addClass("hidden");
+			$(".btn-controls.play").removeClass("hidden");
+		});
+	</script>
+{{/video}}
+
+   
 </body>
 </html>
