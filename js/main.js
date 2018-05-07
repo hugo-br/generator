@@ -789,7 +789,8 @@ function singleImage($that, type, e, error) {
 
 
             // Desktop
-            $.get(tpt, function (template) {
+            Promises.push (
+			$.get(tpt, function (template) {
                 var deskEn = Mustache.to_html(template, {
                     i: ind
                     , title: en_CA.title
@@ -816,10 +817,11 @@ function singleImage($that, type, e, error) {
                
                 tempENG.d[ind]= deskEn;
                 tempFR.d[ind]= deskFr;
-            });
+            })
+			);
 
             // Tablet and Mobile use the same template only the variable changes
-            $.get(mobTpt, function (template) {
+            Promises.push($.get(mobTpt, function (template) {
                 var mobEn = Mustache.to_html(template, {
                     i: ind
                     , title: en_CA.title
@@ -862,8 +864,10 @@ function singleImage($that, type, e, error) {
                 tempFR.t[ind]= tabFr;
                 tempFR.m[ind]= mobFr;
 
-            });
+            })
+			);
 }
+
 
 // LOGIC FOR IMAGE MAP
 function singleImageMap($that, type, e){
@@ -944,6 +948,7 @@ function singleImageMap($that, type, e){
             }
             
             // Desktop
+			Promises.push(
             $.get(tpt, function (template) {
                 var deskEn = Mustache.to_html(template, {
                     i: ind
@@ -978,9 +983,10 @@ function singleImageMap($that, type, e){
                 
                 tempENG.d[ind] = deskEn;
                 tempFR.d[ind] = deskFr;
-            });
-                
+            })
+            );    
             
+			Promises.push (
             // Tablet
             $.get(tabTpt, function (template) {
                 var tabEn = Mustache.to_html(template, {
@@ -1007,8 +1013,8 @@ function singleImageMap($that, type, e){
                 
                 tempENG.t[ind] = tabEn;
                 tempFR.t[ind] = tabFr;
-            });
-                
+            })
+            );   
 				
 				
        /* 2 images side by side on Mobile LOGIC */  
@@ -1057,7 +1063,7 @@ function singleImageMap($that, type, e){
          //       FR.mobile += mobFrL;
         //        FR.mobile += mobFrR;
 		
-		
+		  Promises.push (
 		  $.get(mobTpt, function (template) {
                 
                 var MobEn = Mustache.to_html(template, {
@@ -1088,10 +1094,10 @@ function singleImageMap($that, type, e){
                 
               //  ERROR += "Please check your <strong>mobile</strong> image for <strong>ROW #"+ind+"</strong>, it might be wrong. <br>";    
 			  
-			  
-			  
-            });
+            })
+			);
 }
+
 
 // LOGIC FOR CUSTOM HTML BLOCK
 function customHTML($that, type, e) {
@@ -1099,7 +1105,8 @@ function customHTML($that, type, e) {
     var tpt = 'template/landingPage/' + type + '.html'; // Desktop html template
     var ind = e + 1;
     var no = "\n<!-- ROW #" + ind + " START  -->\n<!-- ROW #" + ind + " END -->\n";
-            
+     
+    Promises.push (	 
      $.get(tpt, function (template) {
              
        var eng = Mustache.to_html(template, {
@@ -1137,8 +1144,8 @@ function customHTML($that, type, e) {
              tempFR.m[ind] = no;            
          }
       
-       });   
-    
+       })   
+      );
 }
 
 
@@ -1231,6 +1238,7 @@ function twoImages($that, type, e) {
             };
             
             // Desktop
+			Promises.push (
             $.get(tpt, function (template) {
                 var deskEn = Mustache.to_html(template, {
                     i: ind
@@ -1265,10 +1273,11 @@ function twoImages($that, type, e) {
                 
                 tempENG.d[ind] = deskEn;
                 tempFR.d[ind] = deskFr;
-            });
-                
+            })
+            );   
             
             // Tablet
+			Promises.push (
             $.get(tabTpt, function (template) {
                 var tabEn = Mustache.to_html(template, {
                     i: ind
@@ -1295,10 +1304,11 @@ function twoImages($that, type, e) {
                 tempENG.t[ind] = tabEn;
                 tempFR.t[ind] = tabFr;
                 
-            });
-                
+            })
+            );    
                 
              // Mobile
+			Promises.push (
             $.get(mobTpt, function (template) {
                 
                 // LEFT image
@@ -1343,7 +1353,8 @@ function twoImages($that, type, e) {
                tempENG.m[ind] = mobEnL + mobEnR;
                tempFR.m[ind] =  mobFrL + mobFrR;                
                    
-            });
+            })
+            );
 }
 
 
@@ -1367,11 +1378,12 @@ function video($that, type, e, tmp) {
 		var blockWidth = '815px';
 	}
     
-	console.log(vidWdith);
+	
 	if(!vidWdith || vidWdith == 'px') { vidWdith = '100%';}
 	var commands = ['Play', 'Jouez', 'Stop', 'Arrêtez', 'Sound', 'Son', 'Mute', 'Muet'];
             
            // Desktop
+		   Promises.push (
              $.get(tpt, function (template) {
                 var deskEn = Mustache.to_html(template, {
                       i: ind 
@@ -1397,10 +1409,11 @@ function video($that, type, e, tmp) {
                 
                 tempENG.d[ind] = deskEn;
                 tempFR.d[ind] = deskFr;
-            });
-                
+            })
+            );   
             
             // Tablet
+			Promises.push (
             $.get(tabTpt, function (template) {
                 
 				var tabEn = Mustache.to_html(template, {
@@ -1420,7 +1433,8 @@ function video($that, type, e, tmp) {
 			// mobile
                 tempENG.m[ind] = tabEn;
                 tempFR.m[ind] = tabFr;               
-            });
+            })
+			);
     
 }
 
@@ -1468,7 +1482,7 @@ function category($that, type, e) {
              engl.color = "background-color: " + engl.color + ";";
         }
     
-    
+    Promises.push (
        $.get(template, function (template) {
              var outputENG = Mustache.to_html(template, {
                      image: engl.img || $that.find("input[name='img']").attr("lang","eng").val()
@@ -1509,14 +1523,17 @@ function category($that, type, e) {
      tempENG.m[ind] = "";
      tempFR.m[ind] = "";    
         
-  });  
-}
+  })  
+     );
+  }
 
 
 // LOGIC FOR SALE ITEMS BLOCK
 function itemsSale($that, type, e) {
     var ind = e + 1;     
     var template = 'template/salePage/' + type + '.html';
+	
+	Promises.push (
     $.get(template, function (template) {
           var outputENG = Mustache.to_html(template, {
                     i : ind
@@ -1554,7 +1571,8 @@ function itemsSale($that, type, e) {
              tempFR.t[ind] = "";
              tempENG.m[ind] = "";
              tempFR.m[ind] = "";        
-    });
+    })
+    );
 }
 
 
@@ -1575,7 +1593,7 @@ function toHomepage(t, lang) {
 ////////////////////////////////////
 ///////   THE CONTROLLER  //////////
 ////////////////////////////////////
-
+var Promises = [];
 function generateLP() {
 	
 	$("#get-code").disable(true); // disabled get code button
@@ -1617,7 +1635,8 @@ function generateLP() {
 	var isThereAVideo = false; // if video variable
 	
     // LOOP to pick all values of the inputs
-    $(".landingImage").each(function (e) {
+  Promises = [];
+  $(".landingImage").each(function (e) {
        
         // type of the div. *** IMPORTANT. Need to be unique. data-type on the html first div with class="container landingImage"
        var type = $(this).data("type"); 
@@ -1629,23 +1648,23 @@ function generateLP() {
             
             // Regular Landing Page logic       
             case 'single':   
-                singleImage($that, type, e);
+                 singleImage($that, type, e);
             break;
 
             case 'single-imageMap':
-                singleImageMap($that, type, e);
+                 singleImageMap($that, type, e);
             break;
 
             case 'multiple':
-               twoImages($that, type, e);
+                twoImages($that, type, e);
             break;
 
             case 'custom-html':
-                customHTML($that, type, e);
+                 customHTML($that, type, e);
             break;
 			
             case 'video':
-                video($that, type, e, tmp);
+                 video($that, type, e, tmp);
 				isThereAVideo = true;
             break;			
             
@@ -1655,7 +1674,7 @@ function generateLP() {
             case 'catPromo':
 			case 'imageCTANew':
 			case 'cropPromoBanners':
-                category($that, type, e);
+                 category($that, type, e);
             break;
                 
       //      case 'outletPromo':
@@ -1669,10 +1688,29 @@ function generateLP() {
                 
             default:
                 alert("Something went wrong...");
+				
         }
+		
+      });
+	  
+	  $.when.apply($, Promises).done(function () {
+		console.log("done");  
+		getPage();
+	  });
+	
+	       
 
-    }); // END OF THE LOOP
 
+  
+ // $.when.apply($,promises).done(getPage());
+
+
+/*
+promise.then(function(result) {
+  console.log(result); // "Stuff worked!"
+}, function(err) {
+  console.log(err); // Error: "It broke"
+});
 	
 	var c = 0;
 	var t;
@@ -1690,7 +1728,7 @@ function generateLP() {
         checkPage();
 	 }
 	}
-
+*/
 
     function getPage() {
 		
@@ -1765,11 +1803,14 @@ function generateLP() {
             
             // Show the results in the modal
             $("#LPModal").modal();
-			stopChecking();
+			$("#get-code").disable(false); // reable get code button
+			Promises = [];
+			// stopChecking();
 			
          });
-    }		 
-    
+    }	
+ 
+/* 
     // END OF THE FUNCTION
     // Check every 380 until the page is render 
     function checkPage() {
@@ -1791,6 +1832,8 @@ function generateLP() {
 	
 	startCount();
 	console.time("Start");
+*/
+
 
 } // End Function
 
