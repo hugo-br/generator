@@ -188,7 +188,7 @@ app.controller('LPCtrl', ['$scope', '$compile', '$timeout', function ($scope, $c
            "name": "Category Banners Page",
            "template": "template/category/category.html",
            "typeBlock": { 
-                "1": {
+                "2": {
                     Name: "Single Image"
                     , value: "category"
                     , template:"template/category/Cat-form-simple.html"
@@ -203,21 +203,34 @@ app.controller('LPCtrl', ['$scope', '$compile', '$timeout', function ($scope, $c
                     , value: "category"
                     , template:"template/category/Cat-form-promo.html"
                 }
+				
 			/* , "4": {
                     Name: "Outlet Promotion Banners"
                     , value: "outletBanner"
                     , template:"template/category/Cat-form-promo-outlet.html"
                 } */
+				
 				, "5": {
                     Name: "Single Image with CTA - OLD"
                     , value: "category"
                     , template:"template/category/Cat-form-cta.html"
                 }
+				
 				, "4": {
                     Name: "Cropping Promo Banner - NEW"
                     , value: "category"
                     , template:"template/category/Cat-form-promo-crop.html"
-                }
+                } 
+				
+                ,"1": {
+                    Name: "Single Image with Preview Link"
+                    , value: "category"
+					//, simpleImageLink
+                    , template:"template/category/Cat-form-simple-link.html"
+                } 				
+				
+				
+				
           }  
        },
 	   
@@ -617,6 +630,17 @@ function imgChange(elem, callbck) {
     };
     
     
+}
+
+// preview link function
+function prevLink(elem){
+	var link = $(elem).val();
+	var res = link.split("lechateau");
+	if(res[1]) {
+		var n = 'http://preview.lechateau.com' + res[1];
+		$(elem).val(n);
+	}
+	
 }
 
 
@@ -1444,6 +1468,7 @@ function category($that, type, e) {
     var ind = e + 1;
     var engl = {};
     var fre = {};
+	
     var template = 'template/category/' + type + '.html';
     //  var tpt = '/template/landingPage/' + type + '.html';  // Desktop html template
     // var template = '/template/category/' + angular.element(event.target).data('tplt') + '.html';
@@ -1484,7 +1509,32 @@ function category($that, type, e) {
     
     Promises.push (
        $.get(template, function (template) {
-             var outputENG = Mustache.to_html(template, {
+		   
+		   
+		   if( type == 'simpleImageLink') {
+	 
+	        var outputENG = Mustache.to_html(template, {
+		          linkPreview: engl.linkPreview || ""
+				, imageENG : engl.imageENG || ""
+                , seoENG : engl.seoENG	 || ""
+                , seoFR : fre.seoFR	 || ""			
+                , imageFR : fre.imageFR || ""
+              });
+        
+            var outputFR = Mustache.to_html(template, {
+                  linkPreview: engl.linkPreview || ""
+				, imageENG : engl.imageENG || ""
+                , seoENG : engl.seoENG	 || ""
+                , seoFR : fre.seoFR	 || ""			
+                , imageFR : fre.imageFR || ""
+            });		 
+			   
+		  
+		  } else {
+             
+			 // default cat banners
+			 
+			 var outputENG = Mustache.to_html(template, {
                      image: engl.img || $that.find("input[name='img']").attr("lang","eng").val()
                     , seo: engl.seo || ""
                     , text: engl.text || "&#160;"
@@ -1496,9 +1546,9 @@ function category($that, type, e) {
                     , bgColor : engl.color || ""
                     , style : " margin-top:0px; left:" + ENG.left + "%; " + "top:" +  ENG.top + "px;" || ""
                     , page : true
-         });
+              });
         
-           var outputFR = Mustache.to_html(template, {
+            var outputFR = Mustache.to_html(template, {
               image: fre.img || ""
                , seo: fre.seo || ""
                , text: fre.text || "&#160;"
@@ -1510,8 +1560,10 @@ function category($that, type, e) {
                , bgColor : fre.color || ""
                , style : " margin-top:0px; left:" + ENG.left + "%; " + "top:" +  ENG.top + "px;" || ""
                , page : true
-         });
-                
+            });
+		
+		}
+		   
      var resENG = decodeHtml(outputENG);
      var reFR = decodeHtml(outputFR);  
 
@@ -1523,8 +1575,11 @@ function category($that, type, e) {
      tempENG.m[ind] = "";
      tempFR.m[ind] = "";    
         
-  })  
-     );
+         })  
+     
+	 ); // @end promises
+	 
+	 
   }
 
 
@@ -1638,10 +1693,9 @@ function generateLP() {
   Promises = [];
   $(".landingImage").each(function (e) {
        
-        // type of the div. *** IMPORTANT. Need to be unique. data-type on the html first div with class="container landingImage"
+    // type of the div. *** IMPORTANT. Need to be unique. data-type on the html first div with class="container landingImage"
        var type = $(this).data("type"); 
        var $that = $(this);
-
 	   
 	   // what it does : select the function for each block template
         switch (type) {
@@ -1674,12 +1728,10 @@ function generateLP() {
             case 'catPromo':
 			case 'imageCTANew':
 			case 'cropPromoBanners':
+			case 'simpleImageLink' :
                  category($that, type, e);
             break;
                 
-      //      case 'outletPromo':
-      //          alert("hi");
-      //      break; 
             
             // Sale Page logic    
             case 'itemsSale':
