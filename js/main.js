@@ -637,7 +637,7 @@ function prevLink(elem){
 	var link = $(elem).val();
 	var res = link.split("lechateau");
 	if(res[1]) {
-		var n = 'http://preview.lechateau.com' + res[1];
+		var n = 'http://preview.lechateau' + res[1];
 		$(elem).val(n);
 	}
 	
@@ -1512,21 +1512,21 @@ function category($that, type, e) {
 		   
 		   
 		   if( type == 'simpleImageLink') {
-	 
+	          console.log(engl);
 	        var outputENG = Mustache.to_html(template, {
 		          linkPreview: engl.linkPreview || ""
-				, imageENG : engl.imageENG || ""
+				, imageENG : engl.img || ""
                 , seoENG : engl.seoENG	 || ""
                 , seoFR : fre.seoFR	 || ""			
-                , imageFR : fre.imageFR || ""
+                , imageFR : fre.img || ""
               });
         
             var outputFR = Mustache.to_html(template, {
                   linkPreview: engl.linkPreview || ""
-				, imageENG : engl.imageENG || ""
+				, imageENG : engl.img || ""
                 , seoENG : engl.seoENG	 || ""
                 , seoFR : fre.seoFR	 || ""			
-                , imageFR : fre.imageFR || ""
+                , imageFR : fre.img || ""
             });		 
 			   
 		  
