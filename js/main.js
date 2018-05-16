@@ -188,17 +188,16 @@ app.controller('LPCtrl', ['$scope', '$compile', '$timeout', function ($scope, $c
            "name": "Category Banners Page",
            "template": "template/category/category.html",
            "typeBlock": { 
-                "2": {
-                    Name: "Single Image"
-                    , value: "category"
-                    , template:"template/category/Cat-form-simple.html"
-                } 
-				, "2": {
+                
+
+				
+				 "2": {
                     Name: "Single Image with CTA"
                     , value: "category"
                     , template:"template/category/Cat-form-cta-new.html"
                 }
-               , "3": {
+               
+			   , "4": {
                     Name: "Promotion Banners"
                     , value: "category"
                     , template:"template/category/Cat-form-promo.html"
@@ -210,13 +209,13 @@ app.controller('LPCtrl', ['$scope', '$compile', '$timeout', function ($scope, $c
                     , template:"template/category/Cat-form-promo-outlet.html"
                 } */
 				
-				, "5": {
+				, "6": {
                     Name: "Single Image with CTA - OLD"
                     , value: "category"
                     , template:"template/category/Cat-form-cta.html"
                 }
 				
-				, "4": {
+				, "5": {
                     Name: "Cropping Promo Banner - NEW"
                     , value: "category"
                     , template:"template/category/Cat-form-promo-crop.html"
@@ -225,11 +224,14 @@ app.controller('LPCtrl', ['$scope', '$compile', '$timeout', function ($scope, $c
                 ,"1": {
                     Name: "Single Image with Preview Link"
                     , value: "category"
-					//, simpleImageLink
                     , template:"template/category/Cat-form-simple-link.html"
                 } 				
 				
-				
+				,"3": {
+                    Name: "Single Image"
+                    , value: "category"
+                    , template:"template/category/Cat-form-simple.html"
+                } 				
 				
           }  
        },
